@@ -57,7 +57,7 @@ class ReactionContextPredictor:
             top_contexts = self.ranking_model.rank_top_contexts(rxn_fp, input_solvents, input_reagents)
             pass
             result_data = self.table_for_one_reaction_contexts(rxn_smiles, top_contexts[:max_display])
-        results.append(result_data)
+            results.append(result_data)
         return results
         
     def table_for_one_reaction_contexts(self, rxn_smiles, top_contexts):
