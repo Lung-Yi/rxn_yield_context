@@ -22,3 +22,5 @@ with open(args.input_data_path) as f:
 rc_predictor = ReactionContextPredictor(args.class_data_path, args.candidate_generation_model_path, args.ranking_model_path, 
                                         cutoff_solv=args.cutoff_solvent, cutoff_reag=args.cutoff_reagent, verbose=args.verbose)
 output_results = rc_predictor.recommend_reaction_context(rxn_smiles_list, max_display=20)
+for i, result in enumerate(output_results):
+    result.to_csv("example_results/{}.csv".format(i), index=False)
