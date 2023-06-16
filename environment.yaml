@@ -1,4 +1,4 @@
-name: rxn_yield_cotext
+name: rxn_yield_context
 
 channels:
   - pytorch
