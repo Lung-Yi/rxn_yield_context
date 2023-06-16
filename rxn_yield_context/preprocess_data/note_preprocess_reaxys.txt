@@ -1,0 +1,9 @@
+preprocess_reaxys.py ->
+
+將原始reaxys檔案處理成:
+(1) first part記事本(multilabel prediction)
+(2) second part 記事本(ranking prediction)
+(3) 標籤pkl檔案(包含標籤名字和出現頻率)
+(4) 少部分含溫度的second part檔案(temperature regression)
+
+*****比較原本的backup版本，新的版本把篩選nan的yield移到篩選常見的反應條件前面!

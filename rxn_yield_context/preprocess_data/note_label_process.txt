@@ -1,0 +1,26 @@
+檢查Reagent names發現:
+
+0. 同位素
+1. decaborane; Decaborane 兩種開頭大小寫不一樣的name
+2. copper(l) iodide 括號中的l應該要寫成大寫的I，而非小寫的L
+3. 有Cobalt dicholoride 和 CoCl2 兩種重複寫法，一個是IUPAC，一個是分子式
+4. if palladium and (carbon or charcoal) in chemical name or Pd/C in name ==> 都變成[Pd].C 
+5. trifluorormethanesulfonic acid ==> trifluoromethanesulfonic acid 單字名字拼錯
+   potassium trimethylsilonate ==> potassium trimethylsilanolate
+6. 處理完後仍然有些smiles 是 None的需要手動更改
+7. beta?cyclodextrin ==> ?改成空白或-
+
+已處理0,1,2,3,4,7， solvent 重複10個，reagent重複27個
+
+
+6.solvent
+DMF (N,N-dimethyl-formamide)  None==>CN(C)C=O
+d(4)-methanol  None ==> CO
+[D3]acetonitrile  None ==> CC#N
+
+6.reagent
+3percent TFA  None ==> O=C(O)C(F)(F)F
+potassium trimethylsilonate  None ==> C[Si](C)(C)[O-].[K+]   (X)
+sodium isopropylate  None == > CC(C)[O-].[Na+]   (X)
+nan	CC(=O)NC1C(O)CC(O)(C(=O)O)OC1C(O)C(O)CO  ==> None  (X)
+

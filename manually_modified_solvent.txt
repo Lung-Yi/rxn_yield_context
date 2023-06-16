@@ -1,0 +1,11 @@
+DMF (N,N-dimethyl-formamide) -> CN(C)C=O
+[D3]acetonitrile -> CC#N
+(2)H8-toluene -> Cc1ccccc1
+PEG-400 -> OCCOCCOCCOCCOCCO
+neat (no solvent) -> neat (no solvent)
+neat (no solvent, solid phase) -> neat (no solvent)
+neat liquid -> neat (no solvent)
+not given -> neat (no solvent)
+aq. phosphate buffer -> aq. phosphate buffer
+phosphate buffer -> aq. phosphate buffer
+aq. acetate buffer -> CC(=O)O.CC(=O)[O-].[Na+]

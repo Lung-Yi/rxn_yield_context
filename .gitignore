@@ -1,0 +1,5 @@
+*.xlsx
+data/reaxys_output_local/*/*.txt
+z_remove_folder/
+job/
+job_new/

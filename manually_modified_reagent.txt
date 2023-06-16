@@ -1,0 +1,96 @@
+nan -> None
+trifluorormethanesulfonic acid -> O=S(=O)(O)C(F)(F)F
+triphenyl bismuth(V) bisperfluorooctanesulfonate -> O=S(=O)([O-])C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F.O=S(=O)([O-])C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F.c1ccc([Bi+2](c2ccccc2)c2ccccc2)cc1
+CuCl2*H2O -> O.[Cl-].[Cl-].[Cu+2]
+CuCl2*2H2O -> O.[Cl-].[Cl-].[Cu+2]
+diethyl aluminiumcholoride -> [Al+3].[CH2-]C.[CH2-]C.[Cl-]
+tetrabutylammonium periodite -> CCCC[N+](CCCC)(CCCC)CCCC.[O-][I+3]([O-])([O-])[O-]
+tin(II) chloride dihdyrate -> Cl[Sn]Cl.O.O
+borane-THF -> C1CCOC1.[B]
+3percent TFA -> O=C(O)C(F)(F)F
+10percent HCl -> Cl
+Cs2O3 -> O=C([O-])[O-].[Cs+].[Cs+]
+CsCO3 -> O=C([O-])[O-].[Cs+].[Cs+]
+2?-(dimethylamino)-2-biphenylylpalladium(II) chloride dinorbornylphosphine complex -> C1C[C@@H]2C[C@H]1CC2PC1C[C@@H]2CC[C@H]1C2.CN(C)c1ccccc1-c1ccccc1[Pd+].[Cl-]
+2?-(dimethylamino)-2-biphenylyl-palladium(II)chloride dinorbornylphosphine complex -> C1C[C@@H]2C[C@H]1CC2PC1C[C@@H]2CC[C@H]1C2.CN(C)c1ccccc1-c1ccccc1[Pd+].[Cl-]
+[1,1-bis(di-tert-butylphosphino)ferrocene]palladium(II)dichloride -> CC(C)(C)P([C]1[CH][CH][CH][CH]1)C(C)(C)C.CC(C)(C)P([C]1[CH][CH][CH][CH]1)C(C)(C)C.[Cl-].[Cl-].[Fe].[Pd+2]
+1,1'-bis(di-tert-butylphosphino)ferrocenepalladium(II) dichloride -> CC(C)(C)P([C]1[CH][CH][CH][CH]1)C(C)(C)C.CC(C)(C)P([C]1[CH][CH][CH][CH]1)C(C)(C)C.[Cl-].[Cl-].[Fe].[Pd+2]
+dicobalt octacarbonyl -> [C-]#[O+].[C-]#[O+].[C-]#[O+].[C-]#[O+].[C-]#[O+].[C-]#[O+].[C-]#[O+].[C-]#[O+].[Co+2].[Co+2]
+1,3-bis[(2,6-diisopropyl)phenyl]imidazolinium chloride -> CC(C)c1cccc(C(C)C)c1-n1cc[n+](-c2c(C(C)C)cccc2C(C)C)c1.[Cl-]
+(2-dicyclohexylphosphino-2?,4?,6?-triisopropyl-1,1?-biphenyl)[2-(2?-N-methylamino-1,1?-biphenyl)]palladium(II) methanesulfonate -> CC(C)c1cc(C(C)C)c(-c2ccccc2P(C2CCCCC2)C2CCCCC2)c(C(C)C)c1.CS(=O)(=O)[O-].Nc1ccccc1-c1ccccc1[Pd+]
+(2-dicyclohexylphosphino-2?,4?,6?-triisopropyl-1,1'-biphenyl)[2-(2-amino-1,1?-biphenyl)]palladium(II)methanesulfonate -> CC(C)c1cc(C(C)C)c(-c2ccccc2P(C2CCCCC2)C2CCCCC2)c(C(C)C)c1.CS(=O)(=O)[O-].Nc1ccccc1-c1ccccc1[Pd+]
+trans-dichloro(1,3-bis-(2,6-diisopentylphenyl)imidazolylidinium)(3-chloro-pyridine) -> CCC(CC)c1cccc(C(CC)CC)c1-n1ccn(-c2c(C(CC)CC)cccc2C(CC)CC)c1=[Pd-]c1ncccc1Cl.[Cl-].[Cl-]
+1,1'-bis(diphenylphosphino)ferrocene-palladium(II)dichloride dichloromethane complex -> ClCCl.[CH]1[CH][CH][C](P(c2ccccc2)c2ccccc2)[CH]1.[CH]1[CH][CH][C](P(c2ccccc2)c2ccccc2)[CH]1.[Cl-].[Cl-].[Fe].[Pd+2]
+1,1'-bis(diphenylphosphino)ferrocene-palladium(ii)dichloride-chloroform adduct -> ClCCl.[CH]1[CH][CH][C](P(c2ccccc2)c2ccccc2)[CH]1.[CH]1[CH][CH][C](P(c2ccccc2)c2ccccc2)[CH]1.[Cl-].[Cl-].[Fe].[Pd+2]
+(2-dicyclohexylphosphino-2?,6?-dimethoxybiphenyl)[2-(2?-amino-1,1?-biphenyl)]palladium(II) methanesulfonate -> CC(C)c1cc(C(C)C)c(-c2ccccc2P(C2CCCCC2)C2CCCCC2)c(C(C)C)c1.CS(=O)(=O)[O-].Nc1ccccc1-c1ccccc1[Pd+]
+TEA -> CCN(CC)CC
+DBN -> C1CN=C2CCCN2C1
+Decaborane -> Decaborane
+decaborane -> Decaborane
+Amberlyst-15 -> Amberlyst-15
+amberlyst-15 -> Amberlyst-15
+Amberlyst 15 -> Amberlyst-15
+Amberlyst sulfonic acid form -> Amberlyst-15
+Amberlyst A-26 (OH- form) -> Amberlyst-15
+Oxone -> O=S(=O)(O)O[O-].[K+]
+potassium trimethylsilonate -> C[Si](C)(C)[O-].[K+]
+sodium perborate -> O[B-]1(O)OO[B-](O)(O)OO1.[Na+].[Na+]
+CoCl2 -> [Cl-].[Cl-].[Co+2]
+Triton(R)X-100 -> Triton(R)X-100
+Triton X(R)-100 -> Triton(R)X-100
+[{RhCl(CO)dppp}2] -> [{RhCl(CO)dppp}2]
+[RhCl(CO)dppp]2 -> [{RhCl(CO)dppp}2]
+PPA -> O=P(O)(O)O
+polyphosphoric acid (PPA) -> O=P(O)(O)O
+Graphene oxide (GO) -> Graphene oxide (GO)
+graphene oxide -> Graphene oxide (GO)
+3 wtpercent graphite oxide -> Graphene oxide (GO)
+tris(p-bromophenyl)ammoniumyl hexachloroantimonate -> tris(p-bromophenyl)ammoniumyl hexachloroantimonate
+tris(p-bromophenylammoniumyl) hexachloroantimonate -> tris(p-bromophenyl)ammoniumyl hexachloroantimonate
+3-((3,5-bis(trifluoromethyl)phenyl)amino)-4-(((S)-(6-methoxyquinoline-4-yl))((1S,2S,4S,5R-5-vinylquinuclidine-2-yl)methyl)amino)cyclobutan-3-ene-1,2-dione -> C=CC1CN2CCC1C[C@@H]2[C@@H](Nc1c(Nc2cc(C(F)(F)F)cc(C(F)(F)F)c2)c(=O)c1=O)c1ccnc2ccc(OC)cc12
+molecular sieve -> O=[Si]([O-])[O-].O=[Si]([O-])[O-].[Al+3].[Na+]
+3 A molecular sieve -> O=[Si]([O-])[O-].O=[Si]([O-])[O-].[Al+3].[Na+]
+4 A molecular sieve -> O=[Si]([O-])[O-].O=[Si]([O-])[O-].[Al+3].[Na+]
+5A molecular sieve -> O=[Si]([O-])[O-].O=[Si]([O-])[O-].[Al+3].[Na+]
+10% Rh/C -> C.[Rh]
+5% rhodium-on-charcoal -> C.[Rh]
+(1,3-bis(2,6-diisopropylphenyl)-3,4,5,6-tetrahydropyrimidin-2-ylidene)Pd(cinnamyl, 3-phenylallyl)Cl -> CC(C)c1cccc(C(C)C)c1-n1ccn(-c2c(C(C)C)cccc2C(C)C)c1=[Pd+].[CH2][CH][CH]c1ccccc1.[Cl-]
+[(1,3-(2,6-diisopropylphenyl)imidazol-2-ylidene)(3-chloropyridyl)palladium(II) dichloride] -> CC(C)c1cccc(C(C)C)c1N1[C-2]N(c2c(C(C)C)cccc2C(C)C)CC1.Clc1cccnc1[Pd+].[Cl-].[Cl-]
+Poly(n-butyl-4-vinylpyridinium)borohydride -> Poly(n-butyl-4-vinylpyridinium)borohydride
+poly(1,4-butyl-bis-vinylpyridinium) borohydride -> Poly(n-butyl-4-vinylpyridinium)borohydride
+sodium isopropylate -> CC(C)[O-].[Na+]
+iron(II,III) oxide -> [Fe+2].[Fe+3].[Fe+3].[O-2].[O-2].[O-2].[O-2]
+copper(II) ferrite -> [Cu+2].[Fe+3].[Fe+3].[O-2].[O-2].[O-2].[O-2]
+phosphomolybdic acid -> O=P(O)(O)O.[Mo].[Mo].[Mo].[Mo].[Mo].[Mo].[Mo].[Mo].[Mo].[Mo].[Mo].[Mo].[O-2].[O-2].[O-2].[O-2].[O-2].[O-2].[O-2].[O-2].[O-2].[O-2].[O-2].[O-2].[O-2].[O-2].[O-2].[O-2].[O-2].[O-2].[O-2].[O-2].[O-2].[O-2].[O-2].[O-2].[O-2].[O-2].[O-2].[O-2].[O-2].[O-2].[O-2].[O-2].[O-2].[O-2].[O-2].[O-2]
+manganese(ll) chloride -> [Cl-].[Cl-].[Mn+2]
+copper(I) cyanide*2 lithium chloride -> copper(I) cyanide di(lithium chloride)
+copper(I) cyanide di(lithium chloride) -> copper(I) cyanide di(lithium chloride)
+[1,1'-bis(diphenylphosphino)ferrocene]dichloropalladium(II) -> [CH]1[CH][CH][C](P(c2ccccc2)c2ccccc2)[CH]1.[CH]1[CH][CH][C](P(c2ccccc2)c2ccccc2)[CH]1.[Cl-].[Cl-].[Fe].[Pd+2]
+(1,1'-bis(diphenylphosphino)ferrocene)palladium(II) dichloride -> [CH]1[CH][CH][C](P(c2ccccc2)c2ccccc2)[CH]1.[CH]1[CH][CH][C](P(c2ccccc2)c2ccccc2)[CH]1.[Cl-].[Cl-].[Fe].[Pd+2]
+dichloro(1,1'-bis(diphenylphosphanyl)ferrocene)palladium(II)*CH2Cl2 -> [CH]1[CH][CH][C](P(c2ccccc2)c2ccccc2)[CH]1.[CH]1[CH][CH][C](P(c2ccccc2)c2ccccc2)[CH]1.[Cl-].[Cl-].[Fe].[Pd+2]
+palladium bis[bis(diphenylphosphino)ferrocene] dichloride -> [CH]1[CH][CH][C](P(c2ccccc2)c2ccccc2)[CH]1.[CH]1[CH][CH][C](P(c2ccccc2)c2ccccc2)[CH]1.[Cl-].[Cl-].[Fe].[Pd+2]
+tris(pentafluorophenyl)borane monohydrate -> Fc1c(F)c(F)c(OB(Oc2c(F)c(F)c(F)c(F)c2F)Oc2c(F)c(F)c(F)c(F)c2F)c(F)c1F
+cis,cis,cis-1,2,3,4-tetrakis (diphenylphosphinomethyl)cyclopentane -> cis,cis,cis-1,2,3,4-tetrakis (diphenylphosphinomethyl)cyclopentane
+cis,cis,cis-1,2,3,4-tetrakis(diphenylphosphinomethyl)cyclope -> cis,cis,cis-1,2,3,4-tetrakis (diphenylphosphinomethyl)cyclopentane
+cis,cis,cis-tetrakis[(diphenylphosphanyl)methyl]cyclopentane -> cis,cis,cis-1,2,3,4-tetrakis (diphenylphosphinomethyl)cyclopentane
+chloro(2-dicyclohexylphosphino-2?,4?,6?-triisopropyl-1,1?-biphenyl)[2-(2?-amino-1,1?-biphenyl)]palladium(II) -> chloro(2-dicyclohexylphosphino-2?,4?,6?-triisopropyl-1,1?-biphenyl)[2-(2?-amino-1,1?-biphenyl)]palladium(II)
+(chloro(2-dicyclohexylphosphino-2?,4?,6?-triisopropyl-1,1?-biphenyl)[2-(2?-amino-1,1?-biphenyl)]palladium(II)) -> chloro(2-dicyclohexylphosphino-2?,4?,6?-triisopropyl-1,1?-biphenyl)[2-(2?-amino-1,1?-biphenyl)]palladium(II)
+chloro(2-dicyclohexylphosphino-2?,4?,6?-triisopropyl-1,1?-biphenyl)[2-(2?-amino-1,1?-biphenyl?)]palladium(II) -> chloro(2-dicyclohexylphosphino-2?,4?,6?-triisopropyl-1,1?-biphenyl)[2-(2?-amino-1,1?-biphenyl)]palladium(II)
+chloro(2-dicyclohexylphosphino-2?,4?,6?-triisopropyl-1,1?-biphenyl)[2-(2-aminoethyl)phenyl]palladium(II) methyl-t-butyl ether adduct -> chloro(2-dicyclohexylphosphino-2?,4?,6?-triisopropyl-1,1?-biphenyl)[2-(2?-amino-1,1?-biphenyl)]palladium(II)
+chloro-(2-dicyclohexylphosphino-2,4,6-triisopropyl-1,1-biphenyl)[2-(2-amino-1,1-biphenyl)]palladium(II) -> chloro(2-dicyclohexylphosphino-2?,4?,6?-triisopropyl-1,1?-biphenyl)[2-(2?-amino-1,1?-biphenyl)]palladium(II)
+chloro(2-dicyclohexylphosphino-2',6'-dimethoxy-1,1'-biphenyl)[2-(2-aminoethylphenyl)]palladium(II) methyl-t-butyl ether -> chloro(2-dicyclohexylphosphino-2?,6?-dimethoxy-1,1?-biphenyl)[2-(2?-amino-1,1?-biphenyl)]palladium(II)
+chloro(2-dicyclohexylphosphino-2?,6?-dimethoxy-1,1?-biphenyl)(2?-amino-1,1?-biphenyl-2-yl) palladium(II) -> chloro(2-dicyclohexylphosphino-2?,6?-dimethoxy-1,1?-biphenyl)[2-(2?-amino-1,1?-biphenyl)]palladium(II)
+chloro(2-dicyclohexylphosphino-2?,6?-dimethoxy-1,1?-biphenyl)[2-(2?-amino-1,1?-biphenyl)]palladium(II) -> chloro(2-dicyclohexylphosphino-2?,6?-dimethoxy-1,1?-biphenyl)[2-(2?-amino-1,1?-biphenyl)]palladium(II)
+chloro[2-(dicyclohexylphosphino)-3 ,6-dimethoxy-2?,4?, 6?-triisopropyl- 1,1?-biphenyl] [2-(2-aminoethyl)phenyl]palladium(II) -> chloro[2-(dicyclohexylphosphino)-3,6-dimethoxy-2?,4?,6?-tri-1-propyl-1,1?-biphenyl][2-(2-aminoethyl)phenyl]palladium(II)
+chloro[2-(dicyclohexylphosphino)-3,6-dimethoxy-2?,4?,6?-tri-1-propyl-1,1?-biphenyl][2-(2-aminoethyl)phenyl]palladium(II) -> chloro[2-(dicyclohexylphosphino)-3,6-dimethoxy-2?,4?,6?-tri-1-propyl-1,1?-biphenyl][2-(2-aminoethyl)phenyl]palladium(II)
+chloro(2-dicyclohexylphosphino-2?,6?-di-i-propoxy-1,1?-biphenyl)(2?-amino-1,1?-biphenyl-2-yl)-palladium(II) -> chloro(2-dicyclohexylphosphino-2?,6?-di-i-propoxy-1,1?-biphenyl)(2?-amino-1,1?-biphenyl-2-yl)-palladium(II)
+chloro(2-dicyclohexylphosphino-2?,6?-diisopropoxy-1,1?-biphenyl)[2-(2?-amino-1,1?-biphenyl)]palladium(II) 2nd generation -> chloro(2-dicyclohexylphosphino-2?,6?-di-i-propoxy-1,1?-biphenyl)(2?-amino-1,1?-biphenyl-2-yl)-palladium(II)
+borane pyridine complex -> B.c1ccncc1
+Amberlite IR-120 (H+) -> O=C(O)c1cccc(NS(=O)(=O)c2cccc(Cl)c2)c1
+[Pd(IPr)(acac)Cl] -> [Pd(IPr)(acac)Cl]
+[Pd(IPr*)(acac)Cl] -> [Pd(IPr)(acac)Cl]
+[(2-di-cyclohexylphosphino-3,6-dimethoxy-2?,4?,6?-triisopropyl-1,1?-biphenyl)-2-(2?-amino-1,1?-biphenyl)]palladium(II) methanesulfonate -> [(2-di-cyclohexylphosphino-3,6-dimethoxy-2?,4?,6?-triisopropyl-1,1?-biphenyl)-2-(2?-amino-1,1?-biphenyl)]palladium(II) methanesulfonate
+[(2-di-cyclohexylphosphino-3,6-dimethoxy-2?,4?,6?- triisopropyl-1,1?-biphenyl)-2-(2?-amino-1,1?-biphenyl)]palladium(II) methanesulfonate -> [(2-di-cyclohexylphosphino-3,6-dimethoxy-2?,4?,6?-triisopropyl-1,1?-biphenyl)-2-(2?-amino-1,1?-biphenyl)]palladium(II) methanesulfonate
+[1,3-bis(2,6-diisopropylphenyl)imidazol-2-ylidene](3-chloropyridyl)palladium(ll) dichloride -> CC(C)c1cccc(C(C)C)c1-n1ccn(-c2c(C(C)C)cccc2C(C)C)c1=[Pd-]c1ncccc1Cl.[Cl-].[Cl-]
+[1,1?-bis(di-tert-butylphosphino)ferrocene]dichloropalladium(Il) -> CC(C)(C)P([C]1[CH][CH][CH][CH]1)C(C)(C)C.CC(C)(C)P([C]1[CH][CH][CH][CH]1)C(C)(C)C.[Cl-].[Cl-].[Fe].[Pd+2]
+tripotassium phosphate "n" hydrate -> O=P([O-])([O-])[O-].[K+].[K+].[K+]
