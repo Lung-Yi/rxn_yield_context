@@ -3,6 +3,12 @@ This is the reaction context recommendation system for multiple reaction conditi
 
 The manuscript of this repository is in progress.
 
+## Installation
+1. `git clone https://github.com/Lung-Yi/rxn_yield_context.git`
+2. `cd rxn_yield_context`
+3. `conda env create -f environment.yml`
+4. `conda activate rxn_yield_context`
+
 ## Fast use of the trained reaction conditioin model
 ```
 python evaluate_example.py --input_data_path paper_examples.txt
