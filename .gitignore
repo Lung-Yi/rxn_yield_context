@@ -1,5 +1,6 @@
 *.xlsx
-data/reaxys_output_local/*/*.txt
+data/reaxys_output_local/For_first_part_model/*.txt
+data/reaxys_output_local/For_second_part_model/*.txt
 z_remove_folder/
 job/
 job_new/
