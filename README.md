@@ -1,4 +1,4 @@
-# rxn_yield_context
+# Two-Stage Reaction Condition Recommendation System
 This is the reaction context recommendation system for multiple reaction conditions prediction.
 
 The manuscript of this repository is in progress.
