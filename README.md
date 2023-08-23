@@ -1,4 +1,4 @@
-# Two-Stage Reaction Condition Recommendation System
+# rxn_yield_context
 This is the reaction context recommendation system for multiple reaction conditions prediction.
 
 The manuscript of this repository is in progress.
@@ -28,8 +28,8 @@ and run the preprocess_reaxys.ipynb file
 
 (2) convert chemical label names to smiles:
 1. `cd data/reaxys_output_local/unprocessed_class`
-2. `java -jar ../../../preprocess_data/opsin-2.5.0-jar-with-dependencies.jar -osmi class_names_reagent.txt class_names_reagent_smiles.txt`
-3. `java -jar ../../../preprocess_data/opsin-2.5.0-jar-with-dependencies.jar -osmi class_names_solvent.txt class_names_solvent_smiles.txt`
+2. `java -jar ../../../rxn_yield_context/preprocess_data/opsin-2.5.0-jar-with-dependencies.jar -osmi class_names_reagent.txt class_names_reagent_smiles.txt`
+3. `java -jar ../../../rxn_yield_context/preprocess_data/opsin-2.5.0-jar-with-dependencies.jar -osmi class_names_solvent.txt class_names_solvent_smiles.txt`
 (source: https://github.com/dan2097/opsin)
 
 (3) use PubChem and ChemSpider to double check the chemical names and emerge the names and smiles:
@@ -46,12 +46,13 @@ and run the preprocess_reaxys.ipynb file
 3. 
 ```
 python -u Multitask_train_morgan.py --activation ReLU --epochs 80 --dropout 0.3 \
-    --train_path ../data/reaxys_output_local \
+    --train_path ../data/reaxys_output \
     --batch_size 128 --weight_decay 0.0001 --fpsize 4096 --radius 2 \
-    --init_lr 0.00001 --max_lr 0.005 --final_lr 0.0001 --warmup_epochs 2.0 \
-    --save_dir ../save_models/test_10R_first_local \
+    --init_lr 0.0001 --max_lr 0.005 --final_lr 0.0001 --warmup_epochs 2.0 \
+    --save_dir ../save_models/test_10R_first_local_10 \
     --num_last_layer 1 --num_shared_layer 1 \
-    --loss Focal --alpha 0.5 --gamma 2 --valid_per_epoch 5
+    --loss Focal --gamma 3 --valid_per_epoch 5 \ 
+    --hidden_share_size 1024 --hidden_reagent_size 300 --hidden_solvent_size 100
 ```
 
 ## Train the second model (multi-task ranking-regression model, or ranking model).

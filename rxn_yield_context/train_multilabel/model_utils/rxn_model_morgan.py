@@ -116,46 +116,46 @@ class Multitask_Multilabel(nn.Module):
 
         ffn_share = [
             # dropout,
-            nn.Linear(first_linear_dim, 512),
+            nn.Linear(first_linear_dim, args.hidden_share_size),
             activation,
             dropout,
         ]
         ########################## Elastic Part ############################
-        append = [nn.Linear(512, 512),
+        append = [nn.Linear(args.hidden_share_size, args.hidden_share_size),
                   activation,
                   dropout]*(args.num_shared_layer-1)
         ffn_share += append
         #################################################################### 
         
         ffn_reagent = [
-            nn.Linear(512, 300),
+            nn.Linear(args.hidden_share_size, args.hidden_reagent_size),
             activation,
             dropout,
 
         ]
         ########################## Elastic Part ############################
-        append = [nn.Linear(300, 300),
+        append = [nn.Linear(args.hidden_reagent_size, args.hidden_reagent_size),
                   activation,
                   dropout]*(args.num_last_layer-1)
         ffn_reagent += append
         #################################################################### 
-        ffn_reagent += [nn.Linear(300, self.reagent_output_size)]
+        ffn_reagent += [nn.Linear(args.hidden_reagent_size, self.reagent_output_size)]
         
         
         
         ffn_solvent = [
-            nn.Linear(512, 100),
+            nn.Linear(args.hidden_share_size, args.hidden_solvent_size),
             activation,
             dropout,
 
         ]
         ########################## Elastic Part ############################
-        append_s = [nn.Linear(100, 100),
+        append_s = [nn.Linear(args.hidden_solvent_size, args.hidden_solvent_size),
                   activation,
                   dropout]*(args.num_last_layer-1)
         ffn_solvent += append_s
         #################################################################### 
-        ffn_solvent += [nn.Linear(100, self.solvent_output_size)]
+        ffn_solvent += [nn.Linear(args.hidden_solvent_size, self.solvent_output_size)]
         
         self.ffn_share = nn.Sequential(*ffn_share) 
         self.ffn_reagent = nn.Sequential(*ffn_reagent)

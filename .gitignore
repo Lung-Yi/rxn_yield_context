@@ -1,6 +1,10 @@
 *.xlsx
-data/reaxys_output_local/For_first_part_model/*.txt
-data/reaxys_output_local/For_second_part_model/*.txt
+data/reaxys_output/For_first_part_model/*.txt
+data/reaxys_output/For_second_part_model/*.txt
+data/reaxys_output/processed_data.csv
+data/reaxys_output_local_old
 z_remove_folder/
 job/
 job_new/
+rxn_yield_context/train_multilabel/wandb
+save_models/

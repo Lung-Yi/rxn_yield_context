@@ -1,16 +1,12 @@
 # -*- coding: utf-8 -*-
 """
-Created on Wed Oct 14 17:30:01 2020
-
-@author: Lung-Yi
-
-Apply data augmentation in every epoch.
-
+Train the second model for ranking the reaction conditions and predicting temperature.
 """
 
 import os
 import sys
 from typing import List
+import wandb
 
 import numpy as np
 import torch
@@ -69,30 +65,32 @@ def print_args_info(args):
     print('warm up epochs:', args.warmup_epochs)
     print('Model save path: {}'.format(args.save_dir))
 
+def login_wandb(args):
+    hyperparameter_dict = {"init_lr": args.init_lr, "max_lr": args.max_lr, "final_lr": args.final_lr,
+                           "warmup_epochs": args.warmup_epochs, "model_save_path": args.save_dir,
+                           "fp_size": args.fpsize, "fp_radius": args.radius, "alpha": args.alpha,
+                           "dropout": args.dropout, "batch_size": args.batch_size,
+                           "epochs": args.epochs, "activation": args.activation, "h1_size_rxn_fp": args.h1_size_rxn_fp,
+                           "h_size_solvent": args.h_size_solvent, "h_size_reagent": args.h_size_reagent,
+                           "h2_size": args.h2_size,
+                           "cutoff_solv": args.cutoff_solv, "cutoff_reag": args.cutoff_reag,
+                           "num_last_layer": args.num_last_layer, "num_fold": args.num_fold, "redo_epoch": args.redo_epoch}
+    wandb.init(project="rxn_yield_context_second_model", config=hyperparameter_dict)
+    return
 
 if __name__ == '__main__':
     torch.multiprocessing.set_sharing_strategy('file_system')
     parser = TrainArgs_rxn()
     args = parser.parse_args()
     args.device = torch.device('cuda' if torch.cuda.is_available() else 'cpu' )
-#################################################### delete
-    # args.epochs = 10
-    # args.save_dir = "D:/Retro"
-    # args.train_path = "../All_LCC_Data/processed_data_temp_large_2"
-    # args.checkpoint_path = "../save_model/MultiTask_temp_large_2/multitask_model_epoch-50.checkpoint" # load multitask model
-    # args.dropout = 0.3
-    # args.num_workers = 0
-    # args.num_fold = 6
-    # args.cutoff_solv = 0.15 # cutoff of solvent for data augmentation
-    # args.cutoff_reag = 0.15 # cutoff of reagent for data augmentation
-    # args.redo_epoch = 3
-#################################################### delete
+
     if args.save_dir == None:
         raise ValueError('Model save directory must be given.')
     
     os.makedirs(args.save_dir, exist_ok=True)
     print('savel model path: '+args.save_dir)
     print_args_info(args)
+    login_wandb(args)
     """ Load basic classes, training data and listwise model to trian """
     
     data_path = os.path.join(os.path.join(args.train_path, 'For_second_part_model'),  'Splitted_second_train_labels_processed.txt')
@@ -149,7 +147,7 @@ if __name__ == '__main__':
     print('Processing validation data...')
     val_path = os.path.join(os.path.join(args.train_path, 'For_second_part_model'),  'Splitted_second_validate_labels_processed.txt')
     val_data = get_data(val_path)
-    Evaluator.reset_cutoff(cutoff_solv = 0.25, cutoff_reag = 0.25 ) # validation cutoff is different from the data augmentation cutoff
+    Evaluator.reset_cutoff(cutoff_solv = 0.3, cutoff_reag = 0.3) # validation cutoff is different from the data augmentation cutoff
     for i in range(len(val_data)):
         val_fp = torch.Tensor(create_rxn_Morgan2FP_concatenate(val_data[i][1], val_data[i][2], fpsize=args.fpsize, radius=args.radius))
         val_data[i].extend([val_fp])
@@ -242,7 +240,9 @@ if __name__ == '__main__':
         print('avg_multitask_total_loss: {:.5f}'.format(avg_total_loss[0]))
         print('log variance of ranking task: {:.3f}'.format(rxn_model.log_var_rank[0]))
         print('log variance of temperature task: {:.3f}'.format(rxn_model.log_var_temp[0]))
-        
+        log_dict = {"KL-D loss": avg_rank_loss, "MSE loss": avg_temp_loss, "Overall loss": avg_total_loss[0],
+                    "log variance of ranking": rxn_model.log_var_rank[0], "log variance of temperature": rxn_model.log_var_temp[0]}
+        wandb.log(log_dict)
         """ Evaluate every ten epochs """
         
         if (epoch+1) % 10 == 0:
@@ -272,5 +272,6 @@ if __name__ == '__main__':
                 id_ = compare_answer_and_combinations(gold_answers, top_contexts)                        
                 acc_list.append(id_)
 
-            evaluate_overall(acc_list)
+            acc_dict = evaluate_overall(acc_list)
+            wandb.log(acc_dict)
         

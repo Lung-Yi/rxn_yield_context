@@ -100,24 +100,24 @@ class TrainArgs_rxn(Tap):
     """feature radius of morgan fingerprint """
     fp_type: str = 'morgan'
     """fingerprint type: ['morgan', 'drfp'] """
-    
-    bias: bool = False
-    """Whether to add bias to linear layers."""
-    hidden_size: int = 300
-    """Dimensionality of hidden layers in MPN."""
-    depth: int = 3
-    """Number of message passing steps."""
     dropout: float = 0.5
     """Dropout probability in Linear Layer."""
     activation: Literal['ReLU', 'LeakyReLU', 'PReLU', 'tanh', 'SELU', 'ELU'] = 'ReLU'
     """Activation function."""
-    # Model arguments only for second part:
+    # Model arguments only for first part:
     loss: Literal['Focal', 'Asym'] = 'Focal'
     """ loss function for multilabel"""
-    alpha: float = 0.10
+    alpha: float = None
     """ weighing factor in focal loss"""
-    gamma: int = 2
+    gamma: float = 2
     """modulating factor in focal loss"""
+
+    hidden_share_size: int = 512
+    """Dimensionality of hidden layers in shared layer."""
+    hidden_reagent_size: int = 300
+    """Dimensionality of hidden layers in reagent layer."""
+    hidden_solvent_size: int = 100
+    """Dimensionality of hidden layers in solvent layer."""
     
     # Model arguments only for second part:
     last_output_layer_pointwise: Literal['relu', 'sigmoid'] = 'sigmoid'
