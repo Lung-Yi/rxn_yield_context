@@ -1,13 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Created on Wed Oct 14 17:30:01 2020
-
-@author: Lung-Yi
-
-data path: /home/lungyi/rxn_yield_context/small_data2test/second_edition_LCC/06Final_for_first_part_model/Splitted_first_train.txt
-classes path : /home/lungyi/rxn_yield_context/small_data2test/second_edition_LCC/05Final_for_second_part_model/class_solvent.pkl
-model save path: /home/lungyi/rxn_yield_context/model_rxn_test_LCC/morgan/solvent
-MODEL_FILE_NAME = 'rxn_model_epoch.checkpoint'
+Train the first model for candidate generation.
 """
 from logging import Logger
 from argparse import ArgumentParser, Namespace
@@ -31,6 +24,7 @@ from rxn_yield_context.train_multilabel.data_utils import AsymmetricLossOptimize
 from rxn_yield_context.train_multilabel.train_utils import build_optimizer_MTL, build_lr_scheduler, save_rxn_model_checkpoint
 import pickle
 import time
+import wandb
 
 def get_rxn_data(input_path):
     f = open(input_path, 'r')
@@ -146,18 +140,24 @@ def print_args_info(args):
     print('fingerprint radius: {}'.format(args.radius))
     print('alpha weighing factor: {}'.format(args.alpha))
     print('gamma modulating factor: {}'.format(args.gamma))
-
     return 
+
+def login_wandb(args):
+    hyperparameter_dict = {"init_lr": args.init_lr, "max_lr": args.max_lr, "final_lr": args.final_lr,
+                           "warmup_epochs": args.warmup_epochs, "model_save_path": args.save_dir,
+                           "fp_size": args.fpsize, "fp_radius": args.radius, "alpha": args.alpha,
+                           "gamma": args.gamma, "dropout": args.dropout, "batch_size": args.batch_size,
+                           "epochs": args.epochs, "activation": args.activation, "h1_size_rxn_fp": args.h1_size_rxn_fp,
+                           "hidden_share_size": args.hidden_share_size, "hidden_reagent_size": args.hidden_reagent_size,
+                           "hidden_solvent_size": args.hidden_solvent_size}
+    wandb.init(project="rxn_yield_context_first_model", config=hyperparameter_dict)
+    return
 
 if __name__ == '__main__':
 
     parser = TrainArgs_rxn()
     args = parser.parse_args()
-    
-    # args.train_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) # TODO
-    # args.train_path = os.path.join(os.path.join(args.train_path, 'All_LCC_Data'), 'processed_data_temp') # TODO
-    # args.save_dir = os.path.join(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'save_model'), 'MultiTask') # TODO
-    
+    login_wandb(args)
 
     train_data_path = os.path.join(os.path.join(args.train_path, 'For_first_part_model'), 'Splitted_first_train_labels_processed.txt')
     valid_data_path = os.path.join(os.path.join(args.train_path, 'For_first_part_model'), 'Splitted_first_validate_labels_processed.txt')
@@ -334,9 +334,23 @@ if __name__ == '__main__':
             print('cutoff = 0.1, acc: {:.5f}, precision: {:.5f}, recall: {:.5f}, f1-score: {:.5f}, number of preds: {:.2f}'.format(*reagent_acc_tuple_1))
             print('-'*20)
             
+            for ii, (acc, prec, recall, f1, num_pred) in enumerate([solvent_acc_tuple_1, solvent_acc_tuple_2, 
+                                                          solvent_acc_tuple_3, solvent_acc_tuple_4, solvent_acc_tuple_5]):
+                log_dict = {f"solvent 0.{ii+1} accuracy": acc, f"solvent 0.{ii+1} precision": prec, 
+                            f"solvent 0.{ii+1} recall": recall, f"solvent 0.{ii+1} f1-score": f1, f"solvent 0.{ii+1} number preds":num_pred}
+                wandb.log(log_dict)
+            for ii, (acc, prec, recall, f1, num_pred) in enumerate([reagent_acc_tuple_1, reagent_acc_tuple_2, 
+                                                          reagent_acc_tuple_3, reagent_acc_tuple_4, reagent_acc_tuple_5]):
+                log_dict = {f"reagent 0.{ii+1} accuracy": acc, f"reagent 0.{ii+1} precision": prec, 
+                            f"reagent 0.{ii+1} recall": recall, f"reagent 0.{ii+1} f1-score": f1, f"reagent 0.{ii+1} number preds":num_pred}
+                wandb.log(log_dict)
+            overall_f1score03 = solvent_acc_tuple_3[3] + reagent_acc_tuple_3[3]
+            wandb.log({"sum 0.3 f1-score": overall_f1score03})
+            log_dict = {"epoch":epoch, "log varaince solvent": rxn_model.log_var_s.item(), "log variance reagent": rxn_model.log_var_r.item()}
+            wandb.log(log_dict)
+            MODEL_FILE_NAME = 'multitask_model_epoch-{}.checkpoint'.format(epoch+1)
+            save_rxn_model_checkpoint(os.path.join(args.save_dir, MODEL_FILE_NAME), rxn_model, args)
             ###################------- End Validate ------########################
-        MODEL_FILE_NAME = 'multitask_model_epoch-{}.checkpoint'.format(epoch+1)
-        save_rxn_model_checkpoint(os.path.join(args.save_dir, MODEL_FILE_NAME), rxn_model, args)
         
         print('log variance of solvent: ', rxn_model.log_var_s.item())
         print('log variance of reagent: ', rxn_model.log_var_r.item())

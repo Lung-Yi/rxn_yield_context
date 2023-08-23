@@ -22,17 +22,23 @@ with open(args.log_file, 'r') as f:
 
 solv_df = pd.DataFrame()
 reag_df = pd.DataFrame()
+epoch_num_list = []
+
 for i, line in enumerate(data):
     if 'Solvent task' in line:
+        epoch_num = data[i-2].strip().split(": ")[-1]
+        epoch_num_list.append(epoch_num)
         solv_subdf = extract_five_lines(data[i+1:i+6])
         solv_df = pd.concat([solv_df, solv_subdf], axis=0)
     if 'Reagent task' in line:
         reag_subdf = extract_five_lines(data[i+1:i+6])
         reag_df = pd.concat([reag_df, reag_subdf], axis=0)
 
+solv_df['epoch'] = epoch_num_list
+reag_df['epoch'] = epoch_num_list
 output_dir = os.path.dirname(args.log_file)
 solv_saved_path = os.path.join(output_dir, "solvent_task.csv")
 reag_saved_path = os.path.join(output_dir, "reagent_task.csv")
 
-solv_df.to_csv(solv_saved_path)
-reag_df.to_csv(reag_saved_path)
+solv_df.to_csv(solv_saved_path, index=False)
+reag_df.to_csv(reag_saved_path, index=False)

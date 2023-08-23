@@ -498,10 +498,11 @@ def evaluate_overall(acc_list, show=(1,3,5,10,15,20)):
         for key in topk_dict.keys():
             if rank <= key:
                 topk_dict[key] += 1
-    
+    acc_dict = {}
     for key, value in topk_dict.items():
         print("top accuracy@{} : {:.4f}".format(key, value/length))
-    return
+        acc_dict.update({"top@{} accuracy".format(key):  value/length})
+    return acc_dict
 
 def table_for_contexts(rxn, top_contexts): # TODO: change!!!!
     my_table = PrettyTable()
