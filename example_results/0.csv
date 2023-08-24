@@ -1,21 +1,21 @@
 Yield / Rank,Reagent(s),Solvent(s),Temperature,Probability
-Rank1,L-proline,dimethyl sulfoxide,86.3,0.128
-Rank2,silica gel,toluene,89.8,0.077
-Rank3,silica gel,dimethyl sulfoxide,93.6,0.074
-Rank4,"1,8-diazabicyclo[5.4.0]undec-7-ene",dimethyl sulfoxide,99.1,0.065
-Rank5,L-proline,toluene,84.4,0.062
-Rank6,pyrrolidine; silica gel,toluene,99.0,0.055
-Rank7,"1,8-diazabicyclo[5.4.0]undec-7-ene; silica gel",toluene,94.9,0.046
-Rank8,pyrrolidine,toluene,88.8,0.044
-Rank9,"1,8-diazabicyclo[5.4.0]undec-7-ene",toluene,95.4,0.038
-Rank10,L-proline,dimethyl sulfoxide; toluene,87.5,0.035
-Rank11,"1,8-diazabicyclo[5.4.0]undec-7-ene; pyrrolidine; silica gel",toluene,106.2,0.027
-Rank12,"1,8-diazabicyclo[5.4.0]undec-7-ene; silica gel",dimethyl sulfoxide,98.5,0.022
-Rank13,"1,8-diazabicyclo[5.4.0]undec-7-ene; L-proline",toluene,91.5,0.021
-Rank14,"1,8-diazabicyclo[5.4.0]undec-7-ene",dimethyl sulfoxide; toluene,99.2,0.020
-Rank15,L-proline; pyrrolidine; silica gel,toluene,94.5,0.018
-Rank16,"1,8-diazabicyclo[5.4.0]undec-7-ene; pyrrolidine",toluene,95.7,0.018
-Rank17,L-proline; pyrrolidine,toluene,85.8,0.017
-Rank18,pyrrolidine,dimethyl sulfoxide,91.1,0.015
-Rank19,"1,8-diazabicyclo[5.4.0]undec-7-ene; L-proline",dimethyl sulfoxide,93.4,0.015
-Rank20,silica gel,dimethyl sulfoxide; toluene,93.8,0.015
+Rank1,silver trifluoromethanesulfonate,acetonitrile,16.6,0.148
+Rank2,trimethylsilyl trifluoromethanesulfonate,dichloromethane,14.3,0.139
+Rank3,silver trifluoromethanesulfonate,dichloromethane,11.2,0.107
+Rank4,trimethylsilyl trifluoromethanesulfonate,acetonitrile,15.9,0.100
+Rank5,bismuth(lll) trifluoromethanesulfonate,acetonitrile,19.4,0.100
+Rank6,bismuth(lll) trifluoromethanesulfonate,dichloromethane,19.4,0.083
+Rank7,trimethylsilyl trifluoromethanesulfonate,acetonitrile; dichloromethane,13.6,0.062
+Rank8,silver trifluoromethanesulfonate,acetonitrile; dichloromethane,11.9,0.032
+Rank9,bismuth(lll) trifluoromethanesulfonate; trimethylsilyl trifluoromethanesulfonate,dichloromethane,17.0,0.028
+Rank10,bismuth(lll) trifluoromethanesulfonate; silver trifluoromethanesulfonate,dichloromethane,14.2,0.028
+Rank11,bismuth(lll) trifluoromethanesulfonate; silver trifluoromethanesulfonate; trimethylsilyl trifluoromethanesulfonate,dichloromethane,11.5,0.027
+Rank12,silver trifluoromethanesulfonate; trimethylsilyl trifluoromethanesulfonate,dichloromethane,2.8,0.027
+Rank13,bismuth(lll) trifluoromethanesulfonate,acetonitrile; dichloromethane,18.8,0.023
+Rank14,bismuth(lll) trifluoromethanesulfonate; silver trifluoromethanesulfonate,acetonitrile,18.9,0.022
+Rank15,silver trifluoromethanesulfonate; trimethylsilyl trifluoromethanesulfonate,acetonitrile,14.2,0.021
+Rank16,bismuth(lll) trifluoromethanesulfonate; silver trifluoromethanesulfonate; trimethylsilyl trifluoromethanesulfonate,acetonitrile,19.4,0.020
+Rank17,bismuth(lll) trifluoromethanesulfonate; trimethylsilyl trifluoromethanesulfonate,acetonitrile,20.1,0.014
+Rank18,silver trifluoromethanesulfonate; trimethylsilyl trifluoromethanesulfonate,acetonitrile; dichloromethane,3.1,0.006
+Rank19,bismuth(lll) trifluoromethanesulfonate; trimethylsilyl trifluoromethanesulfonate,acetonitrile; dichloromethane,17.4,0.005
+Rank20,bismuth(lll) trifluoromethanesulfonate; silver trifluoromethanesulfonate,acetonitrile; dichloromethane,15.1,0.005

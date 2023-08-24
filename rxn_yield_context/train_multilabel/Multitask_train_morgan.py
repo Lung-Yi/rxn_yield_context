@@ -68,25 +68,6 @@ def create_ReactionDataset_MultiTask(data_path, solvent_classes, reagent_classes
 
     return ReactionDataset(RDP_list)
 
-
-# def calculate_batch_cutoff_accuracy(preds: torch.Tensor, targets: torch.Tensor, cutoff = 0.5) -> (float, float):
-#     """return one more variables: average number of predictions """
-#     assert preds.size() == targets.size()
-#     p = preds.clone()
-#     t = targets.clone()
-#     p = p.cpu().detach().numpy() # move data on gpu to cpu
-#     t = t.cpu().detach().numpy()
-#     acc_list = []
-#     recall_list = []
-#     number_p = []
-#     for i in range(p.shape[0]):
-#         for j in range(p.shape[1]):
-#             p[i][j] = float(p[i][j] >= cutoff)
-#         acc_list.append(calculate_accuracy(p[i], t[i]))
-#         recall_list.append(calculate_recall(p[i], t[i]))
-#         number_p.append(number_preds(p[i]))
-#     return np.mean(acc_list), np.mean(recall_list), np.mean(number_p)
-
 def calculate_batch_cutoff_accuracy(preds: torch.Tensor, targets: torch.Tensor, cutoff = 0.5):
     """return one more variables: average number of predictions """
     assert preds.size() == targets.size()

@@ -37,15 +37,15 @@ and run the preprocess_reaxys.ipynb file
 
 (3) use PubChem and ChemSpider to double check the chemical names and emerge the names and smiles:
 1. `cd rxn_yield_context/preprocess_data`
-2. `python emerge.py --input_dir ../../data/reaxys_output_local/unprocessed_class --output_dir ../../data/reaxys_output_local/label_processed`
-3. `python manually_modify.py --target_dir ../../data/reaxys_output_local/label_processed`
+2. `python emerge.py --input_dir ../../data/reaxys_output/unprocessed_class --output_dir ../../data/reaxys_output/label_processed`
+3. `python manually_modify.py --target_dir ../../data/reaxys_output/label_processed`
 
 (4) use the new label names to process all the train, validation split .txt files:
-`python process_all_data.py --target_dir ../../data/reaxys_output_local`
+`python process_all_data.py --target_dir ../../data/reaxys_output`
 
 ## Train the first model (multi-task multi-label classification model, or candidate generation model).
 1. `export PYTHONPATH="$PYTHONPATH:~/rxn_yield_context"`
-2. `rxn_yield_context/train_multilabel`
+2. `cd rxn_yield_context/train_multilabel`
 3. 
 ```
 python -u Multitask_train_morgan.py --activation ReLU --epochs 80 --dropout 0.3 \

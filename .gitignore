@@ -7,4 +7,5 @@ z_remove_folder/
 job/
 job_new/
 rxn_yield_context/train_multilabel/wandb
-save_models/
+save_models/backup/
+save_models/z_remove

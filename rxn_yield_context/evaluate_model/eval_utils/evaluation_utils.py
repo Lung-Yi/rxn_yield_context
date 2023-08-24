@@ -185,8 +185,8 @@ class MultiTask_Evaluator:
             p2 = truncate_features(p2, candidates_reag, self.max_reag)
         p1 = list(np.where(p1 == 1)[0])
         p2 = list(np.where(p2 == 1)[0])
-        p1 = list(combinations([i for i in p1 if i not in self.EXC_SOLV_INDEX], 3)) + \
-             list(combinations([i for i in p1 if i not in self.EXC_SOLV_INDEX], 2)) + list(combinations(p1, 1))
+        p1 = list(combinations([i for i in p1 if i not in self.EXC_SOLV_INDEX], 2)) + list(combinations(p1, 1))
+        # list(combinations([i for i in p1 if i not in self.EXC_SOLV_INDEX], 3)) + \
         p2 = list(combinations([i for i in p2 if i not in self.EXC_REAG_INDEX], 3)) + \
              list(combinations([i for i in p2 if i not in self.EXC_REAG_INDEX], 2)) + list(combinations(p2, 1))
         
