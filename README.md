@@ -1,4 +1,4 @@
-# Recommending Multiple Reaction Conditions Using Two-Stage Deep Neural Networks
+# RxnYieldContext
 
 ![alt text](saved_figures/abstract.svg)
 

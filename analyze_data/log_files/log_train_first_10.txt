@@ -1,0 +1,756 @@
+Multitask_Multilabel(
+  (sigmoid): Sigmoid()
+  (ffn_share): Sequential(
+    (0): Linear(in_features=8192, out_features=1024, bias=True)
+    (1): ReLU()
+    (2): Dropout(p=0.2, inplace=False)
+  )
+  (ffn_reagent): Sequential(
+    (0): Linear(in_features=1024, out_features=300, bias=True)
+    (1): ReLU()
+    (2): Dropout(p=0.2, inplace=False)
+    (3): Linear(in_features=300, out_features=1320, bias=True)
+  )
+  (ffn_solvent): Sequential(
+    (0): Linear(in_features=1024, out_features=100, bias=True)
+    (1): ReLU()
+    (2): Dropout(p=0.2, inplace=False)
+    (3): Linear(in_features=100, out_features=87, bias=True)
+  )
+  (criterion): FocalLoss()
+)
+batch size: 256
+epoches: 80
+data lengeth: 59745
+dropout probabilty: 0.2
+weight decay for optmizer: 0.0001
+initial learning rate: 0.0001
+max learning rate: 0.005
+final learning rate: 0.0001
+warm up epochs: 2.0
+Model save path: /home/lungyi/rxn_yield_context/save_models/test_10R_first_local_10
+Model device: cuda
+fingerprint size: 4096
+fingerprint radius: 2
+alpha weighing factor: None
+gamma modulating factor: 3.0
+Learning Rate: [0.00011051502145922747]
+log variance of solvent:  0.8949310779571533
+log variance of reagent:  1.0117385387420654
+--------------------------------------------------
+
+Learning Rate: [0.002571030042918455]
+log variance of solvent:  0.37425991892814636
+log variance of reagent:  0.9929208159446716
+--------------------------------------------------
+
+Learning Rate: [0.004996772234928685]
+log variance of solvent:  -0.11780279129743576
+log variance of reagent:  0.9498977065086365
+--------------------------------------------------
+
+Learning Rate: [0.004751321339222913]
+log variance of solvent:  -0.35287177562713623
+log variance of reagent:  0.8953065276145935
+--------------------------------------------------
+
+Learning Rate: [0.004517927455398056]
+
+Time: 156.95598125457764
+--------------- Validate ---------------
+
+epoch: 5
+Overall two tasks of validation avg_BCE_loss: 0.6429 and 1.3882
+Solvent task 1:
+cutoff = 0.5, acc: 0.99181, precision: 0.67242, recall: 0.62962, f1-score: 0.63721, number of preds: 0.90
+cutoff = 0.4, acc: 0.98911, precision: 0.68676, recall: 0.80348, f1-score: 0.71378, number of preds: 1.64
+cutoff = 0.3, acc: 0.97469, precision: 0.50890, recall: 0.91674, f1-score: 0.60611, number of preds: 3.23
+cutoff = 0.2, acc: 0.93588, precision: 0.28927, recall: 0.96862, f1-score: 0.40553, number of preds: 6.77
+cutoff = 0.1, acc: 0.83194, precision: 0.11790, recall: 0.99064, f1-score: 0.20027, number of preds: 15.88
+
+Reagent task 2:
+cutoff = 0.5, acc: 0.99901, precision: 0.56318, recall: 0.49321, f1-score: 0.50910, number of preds: 1.16
+cutoff = 0.4, acc: 0.99868, precision: 0.60315, recall: 0.70159, f1-score: 0.62477, number of preds: 2.40
+cutoff = 0.3, acc: 0.99699, precision: 0.44794, recall: 0.83984, f1-score: 0.54523, number of preds: 5.19
+cutoff = 0.2, acc: 0.99003, precision: 0.21936, recall: 0.92860, f1-score: 0.32458, number of preds: 14.80
+cutoff = 0.1, acc: 0.94208, precision: 0.05412, recall: 0.98157, f1-score: 0.09770, number of preds: 78.32
+--------------------
+log variance of solvent:  -0.48443904519081116
+log variance of reagent:  0.8309792280197144
+--------------------------------------------------
+
+Learning Rate: [0.004295998320243673]
+log variance of solvent:  -0.5808566808700562
+log variance of reagent:  0.7597108483314514
+--------------------------------------------------
+
+Learning Rate: [0.004084970763637552]
+log variance of solvent:  -0.6519289016723633
+log variance of reagent:  0.684861958026886
+--------------------------------------------------
+
+Learning Rate: [0.0038843092794382346]
+log variance of solvent:  -0.727196216583252
+log variance of reagent:  0.6050742268562317
+--------------------------------------------------
+
+Learning Rate: [0.0036935046665779953]
+log variance of solvent:  -0.8043150305747986
+log variance of reagent:  0.521424412727356
+--------------------------------------------------
+
+Learning Rate: [0.003512072736907909]
+
+Time: 157.9126250743866
+--------------- Validate ---------------
+
+epoch: 10
+Overall two tasks of validation avg_BCE_loss: 0.5849 and 1.2633
+Solvent task 1:
+cutoff = 0.5, acc: 0.99284, precision: 0.72640, recall: 0.70105, f1-score: 0.70191, number of preds: 1.03
+cutoff = 0.4, acc: 0.99007, precision: 0.72524, recall: 0.84020, f1-score: 0.75263, number of preds: 1.67
+cutoff = 0.3, acc: 0.97888, precision: 0.58810, recall: 0.92061, f1-score: 0.66837, number of preds: 2.89
+cutoff = 0.2, acc: 0.95029, precision: 0.39803, recall: 0.96674, f1-score: 0.50333, number of preds: 5.51
+cutoff = 0.1, acc: 0.86652, precision: 0.18344, recall: 0.98878, f1-score: 0.27716, number of preds: 12.87
+
+Reagent task 2:
+cutoff = 0.5, acc: 0.99911, precision: 0.65557, recall: 0.62109, f1-score: 0.62067, number of preds: 1.47
+cutoff = 0.4, acc: 0.99866, precision: 0.62876, recall: 0.77452, f1-score: 0.66696, number of preds: 2.71
+cutoff = 0.3, acc: 0.99697, precision: 0.45966, recall: 0.87422, f1-score: 0.55908, number of preds: 5.38
+cutoff = 0.2, acc: 0.99074, precision: 0.23789, recall: 0.94071, f1-score: 0.34266, number of preds: 13.90
+cutoff = 0.1, acc: 0.94992, precision: 0.06672, recall: 0.98036, f1-score: 0.11691, number of preds: 67.96
+--------------------
+log variance of solvent:  -0.8658338189125061
+log variance of reagent:  0.4377996623516083
+--------------------------------------------------
+
+Learning Rate: [0.003339553086516005]
+log variance of solvent:  -0.916618824005127
+log variance of reagent:  0.3545455038547516
+--------------------------------------------------
+
+Learning Rate: [0.0031755079274005966]
+log variance of solvent:  -0.9899275898933411
+log variance of reagent:  0.2690596580505371
+--------------------------------------------------
+
+Learning Rate: [0.003019520976534027]
+log variance of solvent:  -1.0365536212921143
+log variance of reagent:  0.18775267899036407
+--------------------------------------------------
+
+Learning Rate: [0.0028711963994977026]
+log variance of solvent:  -1.1114259958267212
+log variance of reagent:  0.10822820663452148
+--------------------------------------------------
+
+Learning Rate: [0.0027301578060077675]
+
+Time: 158.70062971115112
+--------------- Validate ---------------
+
+epoch: 15
+Overall two tasks of validation avg_BCE_loss: 0.6066 and 1.2175
+Solvent task 1:
+cutoff = 0.5, acc: 0.99333, precision: 0.76195, recall: 0.73666, f1-score: 0.73724, number of preds: 1.08
+cutoff = 0.4, acc: 0.99120, precision: 0.75649, recall: 0.84387, f1-score: 0.77505, number of preds: 1.59
+cutoff = 0.3, acc: 0.98340, precision: 0.65483, recall: 0.91014, f1-score: 0.71745, number of preds: 2.46
+cutoff = 0.2, acc: 0.96284, precision: 0.49809, recall: 0.95620, f1-score: 0.59028, number of preds: 4.39
+cutoff = 0.1, acc: 0.89508, precision: 0.26947, recall: 0.98385, f1-score: 0.36702, number of preds: 10.37
+
+Reagent task 2:
+cutoff = 0.5, acc: 0.99916, precision: 0.69521, recall: 0.67121, f1-score: 0.66649, number of preds: 1.57
+cutoff = 0.4, acc: 0.99879, precision: 0.65322, recall: 0.79114, f1-score: 0.69033, number of preds: 2.59
+cutoff = 0.3, acc: 0.99733, precision: 0.50417, recall: 0.87931, f1-score: 0.59601, number of preds: 4.93
+cutoff = 0.2, acc: 0.99201, precision: 0.28922, recall: 0.93845, f1-score: 0.39487, number of preds: 12.23
+cutoff = 0.1, acc: 0.95571, precision: 0.08842, recall: 0.97807, f1-score: 0.14740, number of preds: 60.31
+--------------------
+log variance of solvent:  -1.1631755828857422
+log variance of reagent:  0.027671417221426964
+--------------------------------------------------
+
+Learning Rate: [0.002596047294782459]
+log variance of solvent:  -1.2447725534439087
+log variance of reagent:  -0.05236349627375603
+--------------------------------------------------
+
+Learning Rate: [0.0024685245453273806]
+log variance of solvent:  -1.2687653303146362
+log variance of reagent:  -0.1286947876214981
+--------------------------------------------------
+
+Learning Rate: [0.0023472659543340014]
+log variance of solvent:  -1.3710689544677734
+log variance of reagent:  -0.20439179241657257
+--------------------------------------------------
+
+Learning Rate: [0.002231963814499891]
+log variance of solvent:  -1.4230175018310547
+log variance of reagent:  -0.2783043384552002
+--------------------------------------------------
+
+Learning Rate: [0.0021223255336868595]
+
+Time: 155.9135057926178
+--------------- Validate ---------------
+
+epoch: 20
+Overall two tasks of validation avg_BCE_loss: 0.6678 and 1.2228
+Solvent task 1:
+cutoff = 0.5, acc: 0.99345, precision: 0.77382, recall: 0.75739, f1-score: 0.75349, number of preds: 1.13
+cutoff = 0.4, acc: 0.99169, precision: 0.76568, recall: 0.83741, f1-score: 0.77962, number of preds: 1.53
+cutoff = 0.3, acc: 0.98630, precision: 0.69516, recall: 0.89581, f1-score: 0.74619, number of preds: 2.17
+cutoff = 0.2, acc: 0.97130, precision: 0.56694, recall: 0.94266, f1-score: 0.64983, number of preds: 3.62
+cutoff = 0.1, acc: 0.92163, precision: 0.36164, recall: 0.97695, f1-score: 0.45970, number of preds: 8.04
+
+Reagent task 2:
+cutoff = 0.5, acc: 0.99923, precision: 0.72062, recall: 0.70330, f1-score: 0.69582, number of preds: 1.62
+cutoff = 0.4, acc: 0.99888, precision: 0.68523, recall: 0.79992, f1-score: 0.71392, number of preds: 2.51
+cutoff = 0.3, acc: 0.99782, precision: 0.57151, recall: 0.87444, f1-score: 0.64957, number of preds: 4.27
+cutoff = 0.2, acc: 0.99427, precision: 0.37889, recall: 0.92947, f1-score: 0.48330, number of preds: 9.20
+cutoff = 0.1, acc: 0.96922, precision: 0.14064, recall: 0.97122, f1-score: 0.21653, number of preds: 42.45
+--------------------
+log variance of solvent:  -1.4766525030136108
+log variance of reagent:  -0.35018104314804077
+--------------------------------------------------
+
+Learning Rate: [0.0020180728924355205]
+log variance of solvent:  -1.526206135749817
+log variance of reagent:  -0.42540237307548523
+--------------------------------------------------
+
+Learning Rate: [0.0019189413379521476]
+log variance of solvent:  -1.5937485694885254
+log variance of reagent:  -0.49993452429771423
+--------------------------------------------------
+
+Learning Rate: [0.0018246793127762269]
+log variance of solvent:  -1.662009358406067
+log variance of reagent:  -0.5658993721008301
+--------------------------------------------------
+
+Learning Rate: [0.0017350476164251303]
+log variance of solvent:  -1.7064048051834106
+log variance of reagent:  -0.6332712769508362
+--------------------------------------------------
+
+Learning Rate: [0.0016498187983960064]
+
+Time: 158.86737704277039
+--------------- Validate ---------------
+
+epoch: 25
+Overall two tasks of validation avg_BCE_loss: 0.7659 and 1.3007
+Solvent task 1:
+cutoff = 0.5, acc: 0.99370, precision: 0.78567, recall: 0.77037, f1-score: 0.76679, number of preds: 1.15
+cutoff = 0.4, acc: 0.99239, precision: 0.78262, recall: 0.83360, f1-score: 0.78974, number of preds: 1.46
+cutoff = 0.3, acc: 0.98856, precision: 0.73054, recall: 0.88659, f1-score: 0.76968, number of preds: 1.95
+cutoff = 0.2, acc: 0.97855, precision: 0.63475, recall: 0.92726, f1-score: 0.70243, number of preds: 2.94
+cutoff = 0.1, acc: 0.94177, precision: 0.44763, recall: 0.96517, f1-score: 0.53809, number of preds: 6.26
+
+Reagent task 2:
+cutoff = 0.5, acc: 0.99925, precision: 0.73358, recall: 0.71245, f1-score: 0.70745, number of preds: 1.62
+cutoff = 0.4, acc: 0.99902, precision: 0.71246, recall: 0.79736, f1-score: 0.73195, number of preds: 2.30
+cutoff = 0.3, acc: 0.99828, precision: 0.62727, recall: 0.86309, f1-score: 0.69020, number of preds: 3.59
+cutoff = 0.2, acc: 0.99583, precision: 0.46208, recall: 0.91399, f1-score: 0.55700, number of preds: 7.08
+cutoff = 0.1, acc: 0.97927, precision: 0.21181, recall: 0.96260, f1-score: 0.29889, number of preds: 29.15
+--------------------
+log variance of solvent:  -1.7817652225494385
+log variance of reagent:  -0.7010129690170288
+--------------------------------------------------
+
+Learning Rate: [0.0015687765809845697]
+log variance of solvent:  -1.8461054563522339
+log variance of reagent:  -0.772418737411499
+--------------------------------------------------
+
+Learning Rate: [0.0014917153104561166]
+log variance of solvent:  -1.8987880945205688
+log variance of reagent:  -0.8437858819961548
+--------------------------------------------------
+
+Learning Rate: [0.001418439435176063]
+log variance of solvent:  -1.9452625513076782
+log variance of reagent:  -0.9074150323867798
+--------------------------------------------------
+
+Learning Rate: [0.0013487630093756936]
+log variance of solvent:  -2.0146806240081787
+log variance of reagent:  -0.9713923931121826
+--------------------------------------------------
+
+Learning Rate: [0.0012825092212938754]
+
+Time: 158.3188817501068
+--------------- Validate ---------------
+
+epoch: 30
+Overall two tasks of validation avg_BCE_loss: 0.8570 and 1.3760
+Solvent task 1:
+cutoff = 0.5, acc: 0.99367, precision: 0.79171, recall: 0.78104, f1-score: 0.77467, number of preds: 1.18
+cutoff = 0.4, acc: 0.99257, precision: 0.78809, recall: 0.83623, f1-score: 0.79393, number of preds: 1.45
+cutoff = 0.3, acc: 0.98955, precision: 0.74766, recall: 0.88241, f1-score: 0.78125, number of preds: 1.85
+cutoff = 0.2, acc: 0.98182, precision: 0.66775, recall: 0.91883, f1-score: 0.72768, number of preds: 2.63
+cutoff = 0.1, acc: 0.95406, precision: 0.50893, recall: 0.96133, f1-score: 0.59436, number of preds: 5.17
+
+Reagent task 2:
+cutoff = 0.5, acc: 0.99924, precision: 0.74525, recall: 0.73640, f1-score: 0.72629, number of preds: 1.74
+cutoff = 0.4, acc: 0.99898, precision: 0.71915, recall: 0.79783, f1-score: 0.73627, number of preds: 2.40
+cutoff = 0.3, acc: 0.99833, precision: 0.65244, recall: 0.86151, f1-score: 0.70846, number of preds: 3.54
+cutoff = 0.2, acc: 0.99625, precision: 0.50631, recall: 0.91038, f1-score: 0.59614, number of preds: 6.52
+cutoff = 0.1, acc: 0.98194, precision: 0.25731, recall: 0.95377, f1-score: 0.34895, number of preds: 25.60
+--------------------
+log variance of solvent:  -2.0526015758514404
+log variance of reagent:  -1.0348758697509766
+--------------------------------------------------
+
+Learning Rate: [0.0012195099444973442]
+log variance of solvent:  -2.096463441848755
+log variance of reagent:  -1.0973666906356812
+--------------------------------------------------
+
+Learning Rate: [0.001159605311240983]
+log variance of solvent:  -2.1651699542999268
+log variance of reagent:  -1.1584757566452026
+--------------------------------------------------
+
+Learning Rate: [0.0011026433067854542]
+log variance of solvent:  -2.20682954788208
+log variance of reagent:  -1.2232601642608643
+--------------------------------------------------
+
+Learning Rate: [0.0010484793836427122]
+log variance of solvent:  -2.244668483734131
+log variance of reagent:  -1.2772808074951172
+--------------------------------------------------
+
+Learning Rate: [0.0009969760947705082]
+
+Time: 159.3531937599182
+--------------- Validate ---------------
+
+epoch: 35
+Overall two tasks of validation avg_BCE_loss: 0.9634 and 1.4836
+Solvent task 1:
+cutoff = 0.5, acc: 0.99385, precision: 0.79519, recall: 0.78801, f1-score: 0.77963, number of preds: 1.19
+cutoff = 0.4, acc: 0.99283, precision: 0.79236, recall: 0.83310, f1-score: 0.79557, number of preds: 1.42
+cutoff = 0.3, acc: 0.99037, precision: 0.75965, recall: 0.87325, f1-score: 0.78653, number of preds: 1.75
+cutoff = 0.2, acc: 0.98419, precision: 0.69428, recall: 0.91069, f1-score: 0.74623, number of preds: 2.40
+cutoff = 0.1, acc: 0.96223, precision: 0.55580, recall: 0.94993, f1-score: 0.63355, number of preds: 4.43
+
+Reagent task 2:
+cutoff = 0.5, acc: 0.99928, precision: 0.75103, recall: 0.73777, f1-score: 0.73035, number of preds: 1.71
+cutoff = 0.4, acc: 0.99907, precision: 0.73572, recall: 0.79610, f1-score: 0.74665, number of preds: 2.25
+cutoff = 0.3, acc: 0.99860, precision: 0.68583, recall: 0.85059, f1-score: 0.72907, number of preds: 3.15
+cutoff = 0.2, acc: 0.99706, precision: 0.56440, recall: 0.89882, f1-score: 0.64262, number of preds: 5.40
+cutoff = 0.1, acc: 0.98699, precision: 0.32425, recall: 0.94619, f1-score: 0.41691, number of preds: 18.90
+--------------------
+log variance of solvent:  -2.2997264862060547
+log variance of reagent:  -1.3322572708129883
+--------------------------------------------------
+
+Learning Rate: [0.0009480027447850735]
+log variance of solvent:  -2.3609743118286133
+log variance of reagent:  -1.3922803401947021
+--------------------------------------------------
+
+Learning Rate: [0.0009014350583068948]
+log variance of solvent:  -2.4104812145233154
+log variance of reagent:  -1.4492682218551636
+--------------------------------------------------
+
+Learning Rate: [0.0008571548645979713]
+log variance of solvent:  -2.448716640472412
+log variance of reagent:  -1.5004903078079224
+--------------------------------------------------
+
+Learning Rate: [0.0008150497976902869]
+log variance of solvent:  -2.4822165966033936
+log variance of reagent:  -1.5491243600845337
+--------------------------------------------------
+
+Learning Rate: [0.0007750130112445374]
+
+Time: 179.3031404018402
+--------------- Validate ---------------
+
+epoch: 40
+Overall two tasks of validation avg_BCE_loss: 1.0420 and 1.6224
+Solvent task 1:
+cutoff = 0.5, acc: 0.99382, precision: 0.79506, recall: 0.78631, f1-score: 0.77924, number of preds: 1.19
+cutoff = 0.4, acc: 0.99304, precision: 0.79590, recall: 0.83430, f1-score: 0.79881, number of preds: 1.40
+cutoff = 0.3, acc: 0.99090, precision: 0.76954, recall: 0.87084, f1-score: 0.79334, number of preds: 1.70
+cutoff = 0.2, acc: 0.98585, precision: 0.71726, recall: 0.90659, f1-score: 0.76290, number of preds: 2.25
+cutoff = 0.1, acc: 0.96786, precision: 0.59231, recall: 0.94534, f1-score: 0.66480, number of preds: 3.92
+
+Reagent task 2:
+cutoff = 0.5, acc: 0.99929, precision: 0.75356, recall: 0.74355, f1-score: 0.73498, number of preds: 1.71
+cutoff = 0.4, acc: 0.99913, precision: 0.74165, recall: 0.79722, f1-score: 0.75080, number of preds: 2.17
+cutoff = 0.3, acc: 0.99873, precision: 0.70062, recall: 0.84394, f1-score: 0.73853, number of preds: 2.94
+cutoff = 0.2, acc: 0.99759, precision: 0.60040, recall: 0.88951, f1-score: 0.67160, number of preds: 4.65
+cutoff = 0.1, acc: 0.99049, precision: 0.38338, recall: 0.93681, f1-score: 0.47515, number of preds: 14.24
+--------------------
+log variance of solvent:  -2.5181291103363037
+log variance of reagent:  -1.593035340309143
+--------------------------------------------------
+
+Learning Rate: [0.0007369429074155373]
+log variance of solvent:  -2.5687057971954346
+log variance of reagent:  -1.6434727907180786
+--------------------------------------------------
+
+Learning Rate: [0.0007007428790362687]
+log variance of solvent:  -2.605703592300415
+log variance of reagent:  -1.6872724294662476
+--------------------------------------------------
+
+Learning Rate: [0.0006663210644663379]
+log variance of solvent:  -2.64749813079834
+log variance of reagent:  -1.729224681854248
+--------------------------------------------------
+
+Learning Rate: [0.0006335901144827389]
+log variance of solvent:  -2.687730073928833
+log variance of reagent:  -1.7704843282699585
+--------------------------------------------------
+
+Learning Rate: [0.0006024669706213836]
+
+Time: 251.32378458976746
+--------------- Validate ---------------
+
+epoch: 45
+Overall two tasks of validation avg_BCE_loss: 1.1387 and 1.7305
+Solvent task 1:
+cutoff = 0.5, acc: 0.99386, precision: 0.79759, recall: 0.79039, f1-score: 0.78243, number of preds: 1.19
+cutoff = 0.4, acc: 0.99307, precision: 0.79580, recall: 0.83175, f1-score: 0.79775, number of preds: 1.39
+cutoff = 0.3, acc: 0.99124, precision: 0.77139, recall: 0.86490, f1-score: 0.79281, number of preds: 1.65
+cutoff = 0.2, acc: 0.98708, precision: 0.72482, recall: 0.90082, f1-score: 0.76835, number of preds: 2.12
+cutoff = 0.1, acc: 0.97207, precision: 0.61325, recall: 0.93765, f1-score: 0.68264, number of preds: 3.54
+
+Reagent task 2:
+cutoff = 0.5, acc: 0.99928, precision: 0.75581, recall: 0.74305, f1-score: 0.73587, number of preds: 1.72
+cutoff = 0.4, acc: 0.99915, precision: 0.74871, recall: 0.79339, f1-score: 0.75332, number of preds: 2.14
+cutoff = 0.3, acc: 0.99880, precision: 0.71060, recall: 0.83956, f1-score: 0.74409, number of preds: 2.83
+cutoff = 0.2, acc: 0.99784, precision: 0.62526, recall: 0.88241, f1-score: 0.68946, number of preds: 4.30
+cutoff = 0.1, acc: 0.99200, precision: 0.42396, recall: 0.93140, f1-score: 0.51289, number of preds: 12.22
+--------------------
+log variance of solvent:  -2.717376470565796
+log variance of reagent:  -1.8105970621109009
+--------------------------------------------------
+
+Learning Rate: [0.0005728726544069138]
+log variance of solvent:  -2.750837564468384
+log variance of reagent:  -1.855266809463501
+--------------------------------------------------
+
+Learning Rate: [0.0005447320669359447]
+log variance of solvent:  -2.784120559692383
+log variance of reagent:  -1.8974978923797607
+--------------------------------------------------
+
+Learning Rate: [0.0005179737983051567]
+log variance of solvent:  -2.817455530166626
+log variance of reagent:  -1.931516408920288
+--------------------------------------------------
+
+Learning Rate: [0.0004925299464006409]
+log variance of solvent:  -2.8449034690856934
+log variance of reagent:  -1.9652334451675415
+--------------------------------------------------
+
+Learning Rate: [0.00046833594458865334]
+
+Time: 247.52303552627563
+--------------- Validate ---------------
+
+epoch: 50
+Overall two tasks of validation avg_BCE_loss: 1.2557 and 1.8313
+Solvent task 1:
+cutoff = 0.5, acc: 0.99387, precision: 0.79872, recall: 0.79084, f1-score: 0.78382, number of preds: 1.20
+cutoff = 0.4, acc: 0.99320, precision: 0.79968, recall: 0.82811, f1-score: 0.79903, number of preds: 1.37
+cutoff = 0.3, acc: 0.99171, precision: 0.78244, recall: 0.86317, f1-score: 0.79976, number of preds: 1.61
+cutoff = 0.2, acc: 0.98832, precision: 0.74230, recall: 0.89408, f1-score: 0.77941, number of preds: 2.00
+cutoff = 0.1, acc: 0.97661, precision: 0.65118, recall: 0.93096, f1-score: 0.71274, number of preds: 3.13
+
+Reagent task 2:
+cutoff = 0.5, acc: 0.99929, precision: 0.75771, recall: 0.74553, f1-score: 0.73838, number of preds: 1.72
+cutoff = 0.4, acc: 0.99916, precision: 0.75077, recall: 0.79017, f1-score: 0.75387, number of preds: 2.11
+cutoff = 0.3, acc: 0.99887, precision: 0.72106, recall: 0.83668, f1-score: 0.75069, number of preds: 2.72
+cutoff = 0.2, acc: 0.99806, precision: 0.64761, recall: 0.88183, f1-score: 0.70653, number of preds: 4.00
+cutoff = 0.1, acc: 0.99323, precision: 0.45576, recall: 0.92674, f1-score: 0.54316, number of preds: 10.58
+--------------------
+log variance of solvent:  -2.881767749786377
+log variance of reagent:  -1.996696949005127
+--------------------------------------------------
+
+Learning Rate: [0.0004453303978705259]
+log variance of solvent:  -2.9090163707733154
+log variance of reagent:  -2.0267138481140137
+--------------------------------------------------
+
+Learning Rate: [0.00042345492708595675]
+log variance of solvent:  -2.9279873371124268
+log variance of reagent:  -2.0593976974487305
+--------------------------------------------------
+
+Learning Rate: [0.0004026540207693305]
+log variance of solvent:  -2.9492883682250977
+log variance of reagent:  -2.0854403972625732
+--------------------------------------------------
+
+Learning Rate: [0.00038287489428313524]
+log variance of solvent:  -2.9800078868865967
+log variance of reagent:  -2.116783857345581
+--------------------------------------------------
+
+Learning Rate: [0.00036406735587101265]
+
+Time: 245.22979068756104
+--------------- Validate ---------------
+
+epoch: 55
+Overall two tasks of validation avg_BCE_loss: 1.3188 and 1.9207
+Solvent task 1:
+cutoff = 0.5, acc: 0.99393, precision: 0.80006, recall: 0.79306, f1-score: 0.78542, number of preds: 1.20
+cutoff = 0.4, acc: 0.99327, precision: 0.79975, recall: 0.82745, f1-score: 0.79870, number of preds: 1.36
+cutoff = 0.3, acc: 0.99182, precision: 0.78403, recall: 0.85997, f1-score: 0.79951, number of preds: 1.59
+cutoff = 0.2, acc: 0.98863, precision: 0.74564, recall: 0.89116, f1-score: 0.78081, number of preds: 1.96
+cutoff = 0.1, acc: 0.97773, precision: 0.65825, recall: 0.92536, f1-score: 0.71777, number of preds: 3.01
+
+Reagent task 2:
+cutoff = 0.5, acc: 0.99928, precision: 0.75738, recall: 0.74578, f1-score: 0.73823, number of preds: 1.73
+cutoff = 0.4, acc: 0.99916, precision: 0.75413, recall: 0.79085, f1-score: 0.75632, number of preds: 2.11
+cutoff = 0.3, acc: 0.99888, precision: 0.72528, recall: 0.83305, f1-score: 0.75205, number of preds: 2.70
+cutoff = 0.2, acc: 0.99814, precision: 0.65710, recall: 0.87591, f1-score: 0.71246, number of preds: 3.86
+cutoff = 0.1, acc: 0.99388, precision: 0.48072, recall: 0.92224, f1-score: 0.56470, number of preds: 9.70
+--------------------
+log variance of solvent:  -3.0085885524749756
+log variance of reagent:  -2.1494855880737305
+--------------------------------------------------
+
+Learning Rate: [0.0003461836792905356]
+log variance of solvent:  -3.028615951538086
+log variance of reagent:  -2.1758532524108887
+--------------------------------------------------
+
+Learning Rate: [0.00032917848270250363]
+log variance of solvent:  -3.049940347671509
+log variance of reagent:  -2.1999197006225586
+--------------------------------------------------
+
+Learning Rate: [0.0003130086135094265]
+log variance of solvent:  -3.0708980560302734
+log variance of reagent:  -2.2271182537078857
+--------------------------------------------------
+
+Learning Rate: [0.0002976330388509575]
+log variance of solvent:  -3.0901360511779785
+log variance of reagent:  -2.2492024898529053
+--------------------------------------------------
+
+Learning Rate: [0.00028301274147839953]
+
+Time: 204.74385738372803
+--------------- Validate ---------------
+
+epoch: 60
+Overall two tasks of validation avg_BCE_loss: 1.3827 and 2.0074
+Solvent task 1:
+cutoff = 0.5, acc: 0.99387, precision: 0.79865, recall: 0.79158, f1-score: 0.78380, number of preds: 1.20
+cutoff = 0.4, acc: 0.99331, precision: 0.79985, recall: 0.82449, f1-score: 0.79769, number of preds: 1.35
+cutoff = 0.3, acc: 0.99206, precision: 0.78710, recall: 0.85773, f1-score: 0.80082, number of preds: 1.56
+cutoff = 0.2, acc: 0.98907, precision: 0.75000, recall: 0.88550, f1-score: 0.78299, number of preds: 1.91
+cutoff = 0.1, acc: 0.97946, precision: 0.67142, recall: 0.92251, f1-score: 0.72816, number of preds: 2.86
+
+Reagent task 2:
+cutoff = 0.5, acc: 0.99930, precision: 0.75868, recall: 0.74518, f1-score: 0.73868, number of preds: 1.71
+cutoff = 0.4, acc: 0.99919, precision: 0.75547, recall: 0.78723, f1-score: 0.75555, number of preds: 2.05
+cutoff = 0.3, acc: 0.99893, precision: 0.73056, recall: 0.82947, f1-score: 0.75491, number of preds: 2.61
+cutoff = 0.2, acc: 0.99828, precision: 0.66945, recall: 0.87213, f1-score: 0.72134, number of preds: 3.66
+cutoff = 0.1, acc: 0.99464, precision: 0.50213, recall: 0.91744, f1-score: 0.58497, number of preds: 8.68
+--------------------
+log variance of solvent:  -3.104039430618286
+log variance of reagent:  -2.2732930183410645
+--------------------------------------------------
+
+Learning Rate: [0.0002691106207440509]
+log variance of solvent:  -3.1155927181243896
+log variance of reagent:  -2.293588399887085
+--------------------------------------------------
+
+Learning Rate: [0.0002558913984541427]
+log variance of solvent:  -3.130185127258301
+log variance of reagent:  -2.3141448497772217
+--------------------------------------------------
+
+Learning Rate: [0.0002433215293464569]
+log variance of solvent:  -3.1498289108276367
+log variance of reagent:  -2.336257219314575
+--------------------------------------------------
+
+Learning Rate: [0.00023136911596545383]
+log variance of solvent:  -3.167815923690796
+log variance of reagent:  -2.3549482822418213
+--------------------------------------------------
+
+Learning Rate: [0.00022000382771889362]
+
+Time: 176.3239107131958
+--------------- Validate ---------------
+
+epoch: 65
+Overall two tasks of validation avg_BCE_loss: 1.4412 and 2.0690
+Solvent task 1:
+cutoff = 0.5, acc: 0.99389, precision: 0.79936, recall: 0.78956, f1-score: 0.78362, number of preds: 1.19
+cutoff = 0.4, acc: 0.99336, precision: 0.80093, recall: 0.82238, f1-score: 0.79760, number of preds: 1.34
+cutoff = 0.3, acc: 0.99218, precision: 0.78866, recall: 0.85236, f1-score: 0.80032, number of preds: 1.54
+cutoff = 0.2, acc: 0.98940, precision: 0.75584, recall: 0.88275, f1-score: 0.78616, number of preds: 1.87
+cutoff = 0.1, acc: 0.98044, precision: 0.68172, recall: 0.91888, f1-score: 0.73557, number of preds: 2.76
+
+Reagent task 2:
+cutoff = 0.5, acc: 0.99929, precision: 0.75756, recall: 0.74440, f1-score: 0.73761, number of preds: 1.71
+cutoff = 0.4, acc: 0.99919, precision: 0.75713, recall: 0.78466, f1-score: 0.75550, number of preds: 2.04
+cutoff = 0.3, acc: 0.99895, precision: 0.73217, recall: 0.82541, f1-score: 0.75439, number of preds: 2.57
+cutoff = 0.2, acc: 0.99835, precision: 0.67643, recall: 0.86707, f1-score: 0.72519, number of preds: 3.55
+cutoff = 0.1, acc: 0.99502, precision: 0.52125, recall: 0.91385, f1-score: 0.60068, number of preds: 8.17
+--------------------
+log variance of solvent:  -3.1853251457214355
+log variance of reagent:  -2.374831199645996
+--------------------------------------------------
+
+Learning Rate: [0.0002091968239105498]
+log variance of solvent:  -3.1985301971435547
+log variance of reagent:  -2.392407178878784
+--------------------------------------------------
+
+Learning Rate: [0.0001989206805537013]
+log variance of solvent:  -3.212920904159546
+log variance of reagent:  -2.4084692001342773
+--------------------------------------------------
+
+Learning Rate: [0.00018914932077968415]
+log variance of solvent:  -3.226095199584961
+log variance of reagent:  -2.4254629611968994
+--------------------------------------------------
+
+Learning Rate: [0.00017985794866490643]
+log variance of solvent:  -3.238494873046875
+log variance of reagent:  -2.437427520751953
+--------------------------------------------------
+
+Learning Rate: [0.00017102298630840545]
+
+Time: 215.55022525787354
+--------------- Validate ---------------
+
+epoch: 70
+Overall two tasks of validation avg_BCE_loss: 1.4844 and 2.1277
+Solvent task 1:
+cutoff = 0.5, acc: 0.99388, precision: 0.80118, recall: 0.79201, f1-score: 0.78562, number of preds: 1.20
+cutoff = 0.4, acc: 0.99333, precision: 0.80159, recall: 0.82261, f1-score: 0.79797, number of preds: 1.34
+cutoff = 0.3, acc: 0.99224, precision: 0.79079, recall: 0.85434, f1-score: 0.80231, number of preds: 1.53
+cutoff = 0.2, acc: 0.98969, precision: 0.76008, recall: 0.88239, f1-score: 0.78914, number of preds: 1.84
+cutoff = 0.1, acc: 0.98130, precision: 0.68725, recall: 0.91867, f1-score: 0.74013, number of preds: 2.68
+
+Reagent task 2:
+cutoff = 0.5, acc: 0.99929, precision: 0.76055, recall: 0.74846, f1-score: 0.74122, number of preds: 1.72
+cutoff = 0.4, acc: 0.99920, precision: 0.75837, recall: 0.78864, f1-score: 0.75811, number of preds: 2.05
+cutoff = 0.3, acc: 0.99896, precision: 0.73555, recall: 0.82640, f1-score: 0.75694, number of preds: 2.54
+cutoff = 0.2, acc: 0.99839, precision: 0.67993, recall: 0.86674, f1-score: 0.72765, number of preds: 3.50
+cutoff = 0.1, acc: 0.99533, precision: 0.52897, recall: 0.91307, f1-score: 0.60797, number of preds: 7.74
+--------------------
+log variance of solvent:  -3.2525970935821533
+log variance of reagent:  -2.4511284828186035
+--------------------------------------------------
+
+Learning Rate: [0.00016262201400027434]
+log variance of solvent:  -3.263577938079834
+log variance of reagent:  -2.4640564918518066
+--------------------------------------------------
+
+Learning Rate: [0.00015463371332912845]
+log variance of solvent:  -3.2755255699157715
+log variance of reagent:  -2.4772424697875977
+--------------------------------------------------
+
+Learning Rate: [0.00014703781308424046]
+log variance of solvent:  -3.285305976867676
+log variance of reagent:  -2.48837947845459
+--------------------------------------------------
+
+Learning Rate: [0.00013981503781506513]
+log variance of solvent:  -3.2949578762054443
+log variance of reagent:  -2.5011250972747803
+--------------------------------------------------
+
+Learning Rate: [0.00013294705891761716]
+
+Time: 245.5190532207489
+--------------- Validate ---------------
+
+epoch: 75
+Overall two tasks of validation avg_BCE_loss: 1.5192 and 2.1514
+Solvent task 1:
+cutoff = 0.5, acc: 0.99392, precision: 0.80404, recall: 0.79487, f1-score: 0.78828, number of preds: 1.20
+cutoff = 0.4, acc: 0.99342, precision: 0.80396, recall: 0.82399, f1-score: 0.80006, number of preds: 1.34
+cutoff = 0.3, acc: 0.99234, precision: 0.79180, recall: 0.85127, f1-score: 0.80202, number of preds: 1.52
+cutoff = 0.2, acc: 0.98995, precision: 0.76202, recall: 0.88079, f1-score: 0.79045, number of preds: 1.82
+cutoff = 0.1, acc: 0.98227, precision: 0.69350, recall: 0.91455, f1-score: 0.74461, number of preds: 2.59
+
+Reagent task 2:
+cutoff = 0.5, acc: 0.99930, precision: 0.76055, recall: 0.74939, f1-score: 0.74164, number of preds: 1.72
+cutoff = 0.4, acc: 0.99920, precision: 0.75859, recall: 0.78710, f1-score: 0.75752, number of preds: 2.04
+cutoff = 0.3, acc: 0.99898, precision: 0.73761, recall: 0.82600, f1-score: 0.75816, number of preds: 2.53
+cutoff = 0.2, acc: 0.99842, precision: 0.68408, recall: 0.86722, f1-score: 0.73078, number of preds: 3.46
+cutoff = 0.1, acc: 0.99552, precision: 0.53836, recall: 0.91019, f1-score: 0.61542, number of preds: 7.49
+--------------------
+log variance of solvent:  -3.3058345317840576
+log variance of reagent:  -2.512378454208374
+--------------------------------------------------
+
+Learning Rate: [0.00012641644812357863]
+log variance of solvent:  -3.3158793449401855
+log variance of reagent:  -2.524217128753662
+--------------------------------------------------
+
+Learning Rate: [0.00012020663327410959]
+log variance of solvent:  -3.325241804122925
+log variance of reagent:  -2.535413980484009
+--------------------------------------------------
+
+Learning Rate: [0.00011430185626613244]
+log variance of solvent:  -3.3355088233947754
+log variance of reagent:  -2.54555606842041
+--------------------------------------------------
+
+Learning Rate: [0.00010868713306437434]
+log variance of solvent:  -3.34427547454834
+log variance of reagent:  -2.555513620376587
+--------------------------------------------------
+
+Learning Rate: [0.00010334821567769383]
+
+Time: 237.01687574386597
+--------------- Validate ---------------
+
+epoch: 80
+Overall two tasks of validation avg_BCE_loss: 1.5505 and 2.2126
+Solvent task 1:
+cutoff = 0.5, acc: 0.99388, precision: 0.80045, recall: 0.79219, f1-score: 0.78515, number of preds: 1.20
+cutoff = 0.4, acc: 0.99341, precision: 0.80396, recall: 0.82271, f1-score: 0.79942, number of preds: 1.33
+cutoff = 0.3, acc: 0.99235, precision: 0.79081, recall: 0.84852, f1-score: 0.80045, number of preds: 1.51
+cutoff = 0.2, acc: 0.99008, precision: 0.76404, recall: 0.87900, f1-score: 0.79136, number of preds: 1.80
+cutoff = 0.1, acc: 0.98268, precision: 0.69732, recall: 0.91327, f1-score: 0.74728, number of preds: 2.55
+
+Reagent task 2:
+cutoff = 0.5, acc: 0.99930, precision: 0.75902, recall: 0.74579, f1-score: 0.73943, number of preds: 1.70
+cutoff = 0.4, acc: 0.99922, precision: 0.75831, recall: 0.78485, f1-score: 0.75677, number of preds: 2.00
+cutoff = 0.3, acc: 0.99901, precision: 0.74007, recall: 0.82384, f1-score: 0.75896, number of preds: 2.47
+cutoff = 0.2, acc: 0.99849, precision: 0.69148, recall: 0.86340, f1-score: 0.73555, number of preds: 3.34
+cutoff = 0.1, acc: 0.99584, precision: 0.55090, recall: 0.90862, f1-score: 0.62629, number of preds: 7.06
+--------------------
+log variance of solvent:  -3.352752447128296
+log variance of reagent:  -2.5647506713867188
+--------------------------------------------------
+

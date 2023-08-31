@@ -1,0 +1,664 @@
+savel model path: /home/lungyi/rxn_yield_context/save_models/test_10R_second_7
+batch size: 64
+epoches: 80
+dropout probabilty: 0.2
+weight decay for optmizer: 1e-05
+initial learning rate: 0.0001
+max learning rate: 0.007
+final learning rate: 5e-05
+warm up epochs: 2.0
+Model save path: /home/lungyi/rxn_yield_context/save_models/test_10R_second_7
+data_path: /home/lungyi/rxn_yield_context/data/reaxys_output/For_second_part_model/Splitted_second_train_labels_processed.txt
+original number of training data: 59746
+processed number of rank traininng data: 62217
+number of temperature traininig data: 63783
+
+Model framework:
+ReactionModel_LWTemp(
+  (relu): ReLU()
+  (ffn1_rxn_fp): Sequential(
+    (0): Linear(in_features=8192, out_features=800, bias=True)
+    (1): ReLU()
+    (2): Dropout(p=0.2, inplace=False)
+  )
+  (ffn_h1_solvent): Sequential(
+    (0): Linear(in_features=87, out_features=100, bias=True)
+    (1): ReLU()
+    (2): Dropout(p=0.2, inplace=False)
+  )
+  (ffn_h1_reagent): Sequential(
+    (0): Linear(in_features=1320, out_features=200, bias=True)
+    (1): ReLU()
+    (2): Dropout(p=0.2, inplace=False)
+  )
+  (ffn_final_ranking): Sequential(
+    (0): Linear(in_features=1100, out_features=500, bias=True)
+    (1): ReLU()
+    (2): Dropout(p=0.2, inplace=False)
+    (3): Linear(in_features=500, out_features=500, bias=True)
+    (4): ReLU()
+    (5): Dropout(p=0.2, inplace=False)
+    (6): Linear(in_features=500, out_features=1, bias=True)
+  )
+  (ffn_final_temperature): Sequential(
+    (0): Linear(in_features=1100, out_features=500, bias=True)
+    (1): ReLU()
+    (2): Dropout(p=0.2, inplace=False)
+    (3): Linear(in_features=500, out_features=500, bias=True)
+    (4): ReLU()
+    (5): Dropout(p=0.2, inplace=False)
+    (6): Linear(in_features=500, out_features=1, bias=True)
+  )
+)
+length of ranking train dataloader: 973
+length of temperature train dataloader: 997
+Processing validation data...
+Start training...
+
+epoch: 1
+avg_ListNet_top_one_loss: 0.40977
+avg_temperature_mse_loss: 1301.78442
+avg_multitask_total_loss: 452.36191
+log variance of ranking task: -0.743
+log variance of temperature task: 1.243
+
+epoch: 2
+avg_ListNet_top_one_loss: 0.34029
+avg_temperature_mse_loss: 901.69745
+avg_multitask_total_loss: 186.91954
+log variance of ranking task: -1.840
+log variance of temperature task: 1.994
+
+epoch: 3
+avg_ListNet_top_one_loss: 0.29332
+avg_temperature_mse_loss: 732.81598
+avg_multitask_total_loss: 81.15576
+log variance of ranking task: -2.002
+log variance of temperature task: 2.493
+
+epoch: 4
+avg_ListNet_top_one_loss: 0.25733
+avg_temperature_mse_loss: 621.70160
+avg_multitask_total_loss: 47.30322
+log variance of ranking task: -2.131
+log variance of temperature task: 2.843
+
+epoch: 5
+avg_ListNet_top_one_loss: 0.24013
+avg_temperature_mse_loss: 590.13208
+avg_multitask_total_loss: 32.97339
+log variance of ranking task: -2.138
+log variance of temperature task: 3.201
+
+epoch: 6
+avg_ListNet_top_one_loss: 0.22295
+avg_temperature_mse_loss: 587.42517
+avg_multitask_total_loss: 24.90779
+log variance of ranking task: -2.224
+log variance of temperature task: 3.526
+
+epoch: 7
+avg_ListNet_top_one_loss: 0.21539
+avg_temperature_mse_loss: 544.55896
+avg_multitask_total_loss: 18.87958
+log variance of ranking task: -2.285
+log variance of temperature task: 3.813
+
+epoch: 8
+avg_ListNet_top_one_loss: 0.20141
+avg_temperature_mse_loss: 542.70459
+avg_multitask_total_loss: 15.95206
+log variance of ranking task: -2.345
+log variance of temperature task: 4.086
+
+epoch: 9
+avg_ListNet_top_one_loss: 0.19488
+avg_temperature_mse_loss: 484.83893
+avg_multitask_total_loss: 13.23555
+log variance of ranking task: -2.389
+log variance of temperature task: 4.296
+
+epoch: 10
+avg_ListNet_top_one_loss: 0.18227
+avg_temperature_mse_loss: 428.79086
+avg_multitask_total_loss: 11.46700
+log variance of ranking task: -2.450
+log variance of temperature task: 4.476
+top accuracy@1 : 0.4817
+top accuracy@3 : 0.6356
+top accuracy@5 : 0.6780
+top accuracy@10 : 0.7062
+top accuracy@15 : 0.7172
+top accuracy@20 : 0.7216
+
+epoch: 11
+avg_ListNet_top_one_loss: 0.17914
+avg_temperature_mse_loss: 415.17856
+avg_multitask_total_loss: 10.77106
+log variance of ranking task: -2.443
+log variance of temperature task: 4.645
+
+epoch: 12
+avg_ListNet_top_one_loss: 0.16667
+avg_temperature_mse_loss: 453.65912
+avg_multitask_total_loss: 10.66146
+log variance of ranking task: -2.522
+log variance of temperature task: 4.805
+
+epoch: 13
+avg_ListNet_top_one_loss: 0.16614
+avg_temperature_mse_loss: 415.83017
+avg_multitask_total_loss: 10.11989
+log variance of ranking task: -2.516
+log variance of temperature task: 4.915
+
+epoch: 14
+avg_ListNet_top_one_loss: 0.15488
+avg_temperature_mse_loss: 363.37851
+avg_multitask_total_loss: 9.50885
+log variance of ranking task: -2.577
+log variance of temperature task: 4.964
+
+epoch: 15
+avg_ListNet_top_one_loss: 0.15481
+avg_temperature_mse_loss: 388.34595
+avg_multitask_total_loss: 9.65374
+log variance of ranking task: -2.577
+log variance of temperature task: 5.019
+
+epoch: 16
+avg_ListNet_top_one_loss: 0.14429
+avg_temperature_mse_loss: 463.62628
+avg_multitask_total_loss: 9.95512
+log variance of ranking task: -2.649
+log variance of temperature task: 5.104
+
+epoch: 17
+avg_ListNet_top_one_loss: 0.14496
+avg_temperature_mse_loss: 624.18433
+avg_multitask_total_loss: 10.85496
+log variance of ranking task: -2.646
+log variance of temperature task: 5.195
+
+epoch: 18
+avg_ListNet_top_one_loss: 0.13377
+avg_temperature_mse_loss: 388.23700
+avg_multitask_total_loss: 9.26395
+log variance of ranking task: -2.745
+log variance of temperature task: 5.196
+
+epoch: 19
+avg_ListNet_top_one_loss: 0.13624
+avg_temperature_mse_loss: 357.81921
+avg_multitask_total_loss: 9.15516
+log variance of ranking task: -2.705
+log variance of temperature task: 5.175
+
+epoch: 20
+avg_ListNet_top_one_loss: 0.12553
+avg_temperature_mse_loss: 407.92267
+avg_multitask_total_loss: 9.25635
+log variance of ranking task: -2.767
+log variance of temperature task: 5.185
+top accuracy@1 : 0.5062
+top accuracy@3 : 0.6557
+top accuracy@5 : 0.6916
+top accuracy@10 : 0.7138
+top accuracy@15 : 0.7221
+top accuracy@20 : 0.7266
+
+epoch: 21
+avg_ListNet_top_one_loss: 0.12806
+avg_temperature_mse_loss: 345.48938
+avg_multitask_total_loss: 8.94605
+log variance of ranking task: -2.778
+log variance of temperature task: 5.165
+
+epoch: 22
+avg_ListNet_top_one_loss: 0.11831
+avg_temperature_mse_loss: 268.92419
+avg_multitask_total_loss: 8.32859
+log variance of ranking task: -2.844
+log variance of temperature task: 5.110
+
+epoch: 23
+avg_ListNet_top_one_loss: 0.12070
+avg_temperature_mse_loss: 339.09589
+avg_multitask_total_loss: 8.78773
+log variance of ranking task: -2.839
+log variance of temperature task: 5.095
+
+epoch: 24
+avg_ListNet_top_one_loss: 0.11107
+avg_temperature_mse_loss: 402.39932
+avg_multitask_total_loss: 9.01005
+log variance of ranking task: -2.908
+log variance of temperature task: 5.108
+
+epoch: 25
+avg_ListNet_top_one_loss: 0.11533
+avg_temperature_mse_loss: 275.88541
+avg_multitask_total_loss: 8.29696
+log variance of ranking task: -2.875
+log variance of temperature task: 5.081
+
+epoch: 26
+avg_ListNet_top_one_loss: 0.10568
+avg_temperature_mse_loss: 308.10776
+avg_multitask_total_loss: 8.30887
+log variance of ranking task: -2.966
+log variance of temperature task: 5.066
+
+epoch: 27
+avg_ListNet_top_one_loss: 0.10954
+avg_temperature_mse_loss: 246.13124
+avg_multitask_total_loss: 7.97607
+log variance of ranking task: -2.930
+log variance of temperature task: 5.023
+
+epoch: 28
+avg_ListNet_top_one_loss: 0.10037
+avg_temperature_mse_loss: 254.33194
+avg_multitask_total_loss: 7.84080
+log variance of ranking task: -3.036
+log variance of temperature task: 4.986
+
+epoch: 29
+avg_ListNet_top_one_loss: 0.10440
+avg_temperature_mse_loss: 248.91013
+avg_multitask_total_loss: 7.87256
+log variance of ranking task: -2.974
+log variance of temperature task: 4.953
+
+epoch: 30
+avg_ListNet_top_one_loss: 0.09588
+avg_temperature_mse_loss: 249.54120
+avg_multitask_total_loss: 7.69426
+log variance of ranking task: -3.052
+log variance of temperature task: 4.928
+top accuracy@1 : 0.5059
+top accuracy@3 : 0.6610
+top accuracy@5 : 0.6938
+top accuracy@10 : 0.7165
+top accuracy@15 : 0.7243
+top accuracy@20 : 0.7280
+
+epoch: 31
+avg_ListNet_top_one_loss: 0.09992
+avg_temperature_mse_loss: 221.07828
+avg_multitask_total_loss: 7.55961
+log variance of ranking task: -3.024
+log variance of temperature task: 4.898
+
+epoch: 32
+avg_ListNet_top_one_loss: 0.09201
+avg_temperature_mse_loss: 175.26254
+avg_multitask_total_loss: 7.02313
+log variance of ranking task: -3.107
+log variance of temperature task: 4.848
+
+epoch: 33
+avg_ListNet_top_one_loss: 0.09546
+avg_temperature_mse_loss: 184.02713
+avg_multitask_total_loss: 7.13848
+log variance of ranking task: -3.070
+log variance of temperature task: 4.801
+
+epoch: 34
+avg_ListNet_top_one_loss: 0.08760
+avg_temperature_mse_loss: 128.27060
+avg_multitask_total_loss: 6.45217
+log variance of ranking task: -3.162
+log variance of temperature task: 4.733
+
+epoch: 35
+avg_ListNet_top_one_loss: 0.09196
+avg_temperature_mse_loss: 173.96957
+avg_multitask_total_loss: 6.91351
+log variance of ranking task: -3.098
+log variance of temperature task: 4.686
+
+epoch: 36
+avg_ListNet_top_one_loss: 0.08572
+avg_temperature_mse_loss: 178.41685
+avg_multitask_total_loss: 6.79278
+log variance of ranking task: -3.159
+log variance of temperature task: 4.660
+
+epoch: 37
+avg_ListNet_top_one_loss: 0.08936
+avg_temperature_mse_loss: 144.57684
+avg_multitask_total_loss: 6.53677
+log variance of ranking task: -3.135
+log variance of temperature task: 4.614
+
+epoch: 38
+avg_ListNet_top_one_loss: 0.08260
+avg_temperature_mse_loss: 140.41557
+avg_multitask_total_loss: 6.30610
+log variance of ranking task: -3.205
+log variance of temperature task: 4.574
+
+epoch: 39
+avg_ListNet_top_one_loss: 0.08670
+avg_temperature_mse_loss: 119.74026
+avg_multitask_total_loss: 6.15418
+log variance of ranking task: -3.166
+log variance of temperature task: 4.514
+
+epoch: 40
+avg_ListNet_top_one_loss: 0.07993
+avg_temperature_mse_loss: 114.55003
+avg_multitask_total_loss: 5.88176
+log variance of ranking task: -3.233
+log variance of temperature task: 4.444
+top accuracy@1 : 0.5042
+top accuracy@3 : 0.6639
+top accuracy@5 : 0.6964
+top accuracy@10 : 0.7183
+top accuracy@15 : 0.7252
+top accuracy@20 : 0.7296
+
+epoch: 41
+avg_ListNet_top_one_loss: 0.08326
+avg_temperature_mse_loss: 110.58143
+avg_multitask_total_loss: 5.87130
+log variance of ranking task: -3.200
+log variance of temperature task: 4.385
+
+epoch: 42
+avg_ListNet_top_one_loss: 0.07837
+avg_temperature_mse_loss: 94.26750
+avg_multitask_total_loss: 5.49555
+log variance of ranking task: -3.253
+log variance of temperature task: 4.318
+
+epoch: 43
+avg_ListNet_top_one_loss: 0.08077
+avg_temperature_mse_loss: 125.22444
+avg_multitask_total_loss: 5.93749
+log variance of ranking task: -3.233
+log variance of temperature task: 4.292
+
+epoch: 44
+avg_ListNet_top_one_loss: 0.07626
+avg_temperature_mse_loss: 90.68557
+avg_multitask_total_loss: 5.32151
+log variance of ranking task: -3.279
+log variance of temperature task: 4.239
+
+epoch: 45
+avg_ListNet_top_one_loss: 0.07930
+avg_temperature_mse_loss: 82.26624
+avg_multitask_total_loss: 5.22755
+log variance of ranking task: -3.249
+log variance of temperature task: 4.162
+
+epoch: 46
+avg_ListNet_top_one_loss: 0.07535
+avg_temperature_mse_loss: 88.16972
+avg_multitask_total_loss: 5.16189
+log variance of ranking task: -3.300
+log variance of temperature task: 4.097
+
+epoch: 47
+avg_ListNet_top_one_loss: 0.07749
+avg_temperature_mse_loss: 94.71989
+avg_multitask_total_loss: 5.30030
+log variance of ranking task: -3.279
+log variance of temperature task: 4.052
+
+epoch: 48
+avg_ListNet_top_one_loss: 0.07351
+avg_temperature_mse_loss: 81.17059
+avg_multitask_total_loss: 4.93601
+log variance of ranking task: -3.320
+log variance of temperature task: 4.020
+
+epoch: 49
+avg_ListNet_top_one_loss: 0.07575
+avg_temperature_mse_loss: 93.70130
+avg_multitask_total_loss: 5.20920
+log variance of ranking task: -3.302
+log variance of temperature task: 4.000
+
+epoch: 50
+avg_ListNet_top_one_loss: 0.07242
+avg_temperature_mse_loss: 75.53348
+avg_multitask_total_loss: 4.76856
+log variance of ranking task: -3.338
+log variance of temperature task: 3.962
+top accuracy@1 : 0.5149
+top accuracy@3 : 0.6654
+top accuracy@5 : 0.6960
+top accuracy@10 : 0.7197
+top accuracy@15 : 0.7260
+top accuracy@20 : 0.7300
+
+epoch: 51
+avg_ListNet_top_one_loss: 0.07459
+avg_temperature_mse_loss: 72.73264
+avg_multitask_total_loss: 4.74773
+log variance of ranking task: -3.316
+log variance of temperature task: 3.913
+
+epoch: 52
+avg_ListNet_top_one_loss: 0.07083
+avg_temperature_mse_loss: 83.18929
+avg_multitask_total_loss: 4.83123
+log variance of ranking task: -3.354
+log variance of temperature task: 3.888
+
+epoch: 53
+avg_ListNet_top_one_loss: 0.07354
+avg_temperature_mse_loss: 96.29618
+avg_multitask_total_loss: 5.17719
+log variance of ranking task: -3.332
+log variance of temperature task: 3.865
+
+epoch: 54
+avg_ListNet_top_one_loss: 0.07092
+avg_temperature_mse_loss: 66.98376
+avg_multitask_total_loss: 4.47760
+log variance of ranking task: -3.356
+log variance of temperature task: 3.853
+
+epoch: 55
+avg_ListNet_top_one_loss: 0.07242
+avg_temperature_mse_loss: 71.85009
+avg_multitask_total_loss: 4.61649
+log variance of ranking task: -3.344
+log variance of temperature task: 3.840
+
+epoch: 56
+avg_ListNet_top_one_loss: 0.07002
+avg_temperature_mse_loss: 67.79201
+avg_multitask_total_loss: 4.45145
+log variance of ranking task: -3.365
+log variance of temperature task: 3.821
+
+epoch: 57
+avg_ListNet_top_one_loss: 0.07098
+avg_temperature_mse_loss: 84.07963
+avg_multitask_total_loss: 4.83052
+log variance of ranking task: -3.363
+log variance of temperature task: 3.813
+
+epoch: 58
+avg_ListNet_top_one_loss: 0.06881
+avg_temperature_mse_loss: 91.62852
+avg_multitask_total_loss: 4.93405
+log variance of ranking task: -3.382
+log variance of temperature task: 3.810
+
+epoch: 59
+avg_ListNet_top_one_loss: 0.06977
+avg_temperature_mse_loss: 67.11971
+avg_multitask_total_loss: 4.41540
+log variance of ranking task: -3.381
+log variance of temperature task: 3.803
+
+epoch: 60
+avg_ListNet_top_one_loss: 0.06778
+avg_temperature_mse_loss: 63.75000
+avg_multitask_total_loss: 4.27579
+log variance of ranking task: -3.399
+log variance of temperature task: 3.792
+top accuracy@1 : 0.5206
+top accuracy@3 : 0.6651
+top accuracy@5 : 0.6988
+top accuracy@10 : 0.7192
+top accuracy@15 : 0.7266
+top accuracy@20 : 0.7307
+
+epoch: 61
+avg_ListNet_top_one_loss: 0.06929
+avg_temperature_mse_loss: 79.89081
+avg_multitask_total_loss: 4.68149
+log variance of ranking task: -3.393
+log variance of temperature task: 3.783
+
+epoch: 62
+avg_ListNet_top_one_loss: 0.06775
+avg_temperature_mse_loss: 70.89903
+avg_multitask_total_loss: 4.42706
+log variance of ranking task: -3.403
+log variance of temperature task: 3.776
+
+epoch: 63
+avg_ListNet_top_one_loss: 0.06837
+avg_temperature_mse_loss: 61.87651
+avg_multitask_total_loss: 4.23359
+log variance of ranking task: -3.402
+log variance of temperature task: 3.763
+
+epoch: 64
+avg_ListNet_top_one_loss: 0.06690
+avg_temperature_mse_loss: 84.70108
+avg_multitask_total_loss: 4.71599
+log variance of ranking task: -3.412
+log variance of temperature task: 3.758
+
+epoch: 65
+avg_ListNet_top_one_loss: 0.06798
+avg_temperature_mse_loss: 56.18422
+avg_multitask_total_loss: 4.07825
+log variance of ranking task: -3.409
+log variance of temperature task: 3.749
+
+epoch: 66
+avg_ListNet_top_one_loss: 0.06656
+avg_temperature_mse_loss: 65.43412
+avg_multitask_total_loss: 4.24808
+log variance of ranking task: -3.417
+log variance of temperature task: 3.739
+
+epoch: 67
+avg_ListNet_top_one_loss: 0.06781
+avg_temperature_mse_loss: 59.57078
+avg_multitask_total_loss: 4.14044
+log variance of ranking task: -3.414
+log variance of temperature task: 3.730
+
+epoch: 68
+avg_ListNet_top_one_loss: 0.06622
+avg_temperature_mse_loss: 66.13806
+avg_multitask_total_loss: 4.24493
+log variance of ranking task: -3.422
+log variance of temperature task: 3.722
+
+epoch: 69
+avg_ListNet_top_one_loss: 0.06782
+avg_temperature_mse_loss: 89.40167
+avg_multitask_total_loss: 4.85645
+log variance of ranking task: -3.416
+log variance of temperature task: 3.719
+
+epoch: 70
+avg_ListNet_top_one_loss: 0.06669
+avg_temperature_mse_loss: 70.66791
+avg_multitask_total_loss: 4.36535
+log variance of ranking task: -3.419
+log variance of temperature task: 3.717
+top accuracy@1 : 0.5194
+top accuracy@3 : 0.6652
+top accuracy@5 : 0.6980
+top accuracy@10 : 0.7196
+top accuracy@15 : 0.7266
+top accuracy@20 : 0.7304
+
+epoch: 71
+avg_ListNet_top_one_loss: 0.06710
+avg_temperature_mse_loss: 56.40014
+avg_multitask_total_loss: 4.02868
+log variance of ranking task: -3.419
+log variance of temperature task: 3.710
+
+epoch: 72
+avg_ListNet_top_one_loss: 0.06584
+avg_temperature_mse_loss: 57.46303
+avg_multitask_total_loss: 4.01133
+log variance of ranking task: -3.426
+log variance of temperature task: 3.702
+
+epoch: 73
+avg_ListNet_top_one_loss: 0.06624
+avg_temperature_mse_loss: 57.81726
+avg_multitask_total_loss: 4.02654
+log variance of ranking task: -3.428
+log variance of temperature task: 3.693
+
+epoch: 74
+avg_ListNet_top_one_loss: 0.06524
+avg_temperature_mse_loss: 59.18876
+avg_multitask_total_loss: 4.02412
+log variance of ranking task: -3.435
+log variance of temperature task: 3.683
+
+epoch: 75
+avg_ListNet_top_one_loss: 0.06631
+avg_temperature_mse_loss: 53.50383
+avg_multitask_total_loss: 3.90703
+log variance of ranking task: -3.433
+log variance of temperature task: 3.670
+
+epoch: 76
+avg_ListNet_top_one_loss: 0.06572
+avg_temperature_mse_loss: 62.08733
+avg_multitask_total_loss: 4.10134
+log variance of ranking task: -3.435
+log variance of temperature task: 3.664
+
+epoch: 77
+avg_ListNet_top_one_loss: 0.06584
+avg_temperature_mse_loss: 51.32010
+avg_multitask_total_loss: 3.82532
+log variance of ranking task: -3.436
+log variance of temperature task: 3.657
+
+epoch: 78
+avg_ListNet_top_one_loss: 0.06498
+avg_temperature_mse_loss: 54.15723
+avg_multitask_total_loss: 3.86656
+log variance of ranking task: -3.440
+log variance of temperature task: 3.648
+
+epoch: 79
+avg_ListNet_top_one_loss: 0.06591
+avg_temperature_mse_loss: 67.76483
+avg_multitask_total_loss: 4.24653
+log variance of ranking task: -3.439
+log variance of temperature task: 3.645
+
+epoch: 80
+avg_ListNet_top_one_loss: 0.06501
+avg_temperature_mse_loss: 69.49474
+avg_multitask_total_loss: 4.26343
+log variance of ranking task: -3.442
+log variance of temperature task: 3.640
+top accuracy@1 : 0.5202
+top accuracy@3 : 0.6676
+top accuracy@5 : 0.6972
+top accuracy@10 : 0.7189
+top accuracy@15 : 0.7274
+top accuracy@20 : 0.7307
