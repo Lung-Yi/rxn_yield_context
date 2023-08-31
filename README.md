@@ -20,7 +20,7 @@ The command will give the results of the illustration in the paper.
 
 ## Training
 ### 1. Prepare the dataset
-Check all the directories in ./data/reaxys/
+Check all the directories in ./data/reaxys_input/
 
 All types of the reaction have their corresponding Reaction ID recoreds in the (.txt) files. Please download the reaction condition files (.xlsx) on https://www.reaxys.com/#/search/quick
 
@@ -60,10 +60,11 @@ python -u Multitask_train_morgan.py --activation ReLU --epochs 80 --dropout 0.3 
 
 ## Train the second model (multi-task ranking-regression model, or ranking model).
 ```
-python -u train_LCC_relevance_listwise_unfixed_augmentation.py --batch_size 32 --epochs 80 --num_workers 0 \
-    --dropout 0.3 --num_fold 7 --init_lr 0.0001 --max_lr 0.005 --final_lr 0.0001 --warmup_epochs 2 \
+python -u train_LCC_relevance_listwise_unfixed_augmentation.py --batch_size 32 --epochs 80 --num_workers 0 --activation ReLU \
+    --dropout 0.2 --num_fold 7 --init_lr 0.0001 --max_lr 0.007 --final_lr 0.00005 --warmup_epochs 2 \
     --cutoff_solv 0.1 --cutoff_reag 0.1 --redo_epoch 2 --num_last_layer 2 \
+    --h1_size_rxn_fp 800 --h_size_solvent 100 --h_size_reagent 200 --h2_size 500 \
     --train_path ..data/reaxys_output_local \
-    --save_dir ..save_models/test_10R_second_local_y \
-    --checkpoint_path ../save_models/test_10R_first_local/multitask_model_epoch-80.checkpoint
+    --save_dir ..save_models/test_10R_second_7 \
+    --checkpoint_path ../save_models/test_10R_first_local_10/multitask_model_epoch-80.checkpoint
 ```
