@@ -148,7 +148,7 @@ class TrainArgs_rxn(Tap):
     """Data augmentation number of fold """
     train_info: bool = False
     """Whether to calculate training error and accuracy """
-    epochs: int = 30
+    epochs: int = 80
     """Number of epochs to run."""
     warmup_epochs: float = 2.0
     """

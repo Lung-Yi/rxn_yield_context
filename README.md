@@ -48,7 +48,7 @@ and run the preprocess_reaxys.ipynb file
 2. `cd rxn_yield_context/train_multilabel`
 3. 
 ```
-python -u Multitask_train_morgan.py --activation ReLU --epochs 80 --dropout 0.3 \
+python -u Multitask_train_morgan.py --activation ReLU --epochs 80 --dropout 0.2 \
     --train_path ../data/reaxys_output \
     --batch_size 128 --weight_decay 0.0001 --fpsize 4096 --radius 2 \
     --init_lr 0.0001 --max_lr 0.005 --final_lr 0.0001 --warmup_epochs 2.0 \

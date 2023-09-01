@@ -1,10 +1,21 @@
 Yield / Rank,Reagent(s),Solvent(s),Temperature,Probability
-Rank1,magnesium bromide,dichloromethane,19.3,0.538
-Rank2,yttrium(III) trifluoromethanesulfonate,acetonitrile,21.9,0.147
-Rank3,magnesium bromide,acetonitrile; dichloromethane,18.5,0.070
-Rank4,yttrium(III) trifluoromethanesulfonate,dichloromethane,20.3,0.065
-Rank5,magnesium bromide; yttrium(III) trifluoromethanesulfonate,dichloromethane,21.0,0.059
-Rank6,magnesium bromide,acetonitrile,19.2,0.055
-Rank7,magnesium bromide; yttrium(III) trifluoromethanesulfonate,acetonitrile,22.3,0.026
-Rank8,yttrium(III) trifluoromethanesulfonate,acetonitrile; dichloromethane,20.4,0.024
-Rank9,magnesium bromide; yttrium(III) trifluoromethanesulfonate,acetonitrile; dichloromethane,21.0,0.015
+Rank1,silver trifluoromethanesulfonate,acetonitrile,16.6,0.148
+Rank2,trimethylsilyl trifluoromethanesulfonate,dichloromethane,14.3,0.139
+Rank3,silver trifluoromethanesulfonate,dichloromethane,11.2,0.107
+Rank4,trimethylsilyl trifluoromethanesulfonate,acetonitrile,15.9,0.100
+Rank5,bismuth(lll) trifluoromethanesulfonate,acetonitrile,19.4,0.100
+Rank6,bismuth(lll) trifluoromethanesulfonate,dichloromethane,19.4,0.083
+Rank7,trimethylsilyl trifluoromethanesulfonate,acetonitrile; dichloromethane,13.6,0.062
+Rank8,silver trifluoromethanesulfonate,acetonitrile; dichloromethane,11.9,0.032
+Rank9,bismuth(lll) trifluoromethanesulfonate; trimethylsilyl trifluoromethanesulfonate,dichloromethane,17.0,0.028
+Rank10,bismuth(lll) trifluoromethanesulfonate; silver trifluoromethanesulfonate,dichloromethane,14.2,0.028
+Rank11,bismuth(lll) trifluoromethanesulfonate; silver trifluoromethanesulfonate; trimethylsilyl trifluoromethanesulfonate,dichloromethane,11.5,0.027
+Rank12,silver trifluoromethanesulfonate; trimethylsilyl trifluoromethanesulfonate,dichloromethane,2.8,0.027
+Rank13,bismuth(lll) trifluoromethanesulfonate,acetonitrile; dichloromethane,18.8,0.023
+Rank14,bismuth(lll) trifluoromethanesulfonate; silver trifluoromethanesulfonate,acetonitrile,18.9,0.022
+Rank15,silver trifluoromethanesulfonate; trimethylsilyl trifluoromethanesulfonate,acetonitrile,14.2,0.021
+Rank16,bismuth(lll) trifluoromethanesulfonate; silver trifluoromethanesulfonate; trimethylsilyl trifluoromethanesulfonate,acetonitrile,19.4,0.020
+Rank17,bismuth(lll) trifluoromethanesulfonate; trimethylsilyl trifluoromethanesulfonate,acetonitrile,20.1,0.014
+Rank18,silver trifluoromethanesulfonate; trimethylsilyl trifluoromethanesulfonate,acetonitrile; dichloromethane,3.1,0.006
+Rank19,bismuth(lll) trifluoromethanesulfonate; trimethylsilyl trifluoromethanesulfonate,acetonitrile; dichloromethane,17.4,0.005
+Rank20,bismuth(lll) trifluoromethanesulfonate; silver trifluoromethanesulfonate,acetonitrile; dichloromethane,15.1,0.005
