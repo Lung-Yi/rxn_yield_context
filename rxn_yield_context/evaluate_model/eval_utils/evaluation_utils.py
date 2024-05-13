@@ -354,7 +354,7 @@ class Ranking_Evaluator():
         
         rxn_fp = rxn_fp.view(1,-1)
         rxn_fp = rxn_fp.repeat(input_solvents.shape[1], 1)
-        rxn_fp = rxn_fp.unsqueeze(0)
+        rxn_fp = rxn_fp.unsqueeze(0).to(self.device)
         
         scores, temperatures = self.model(rxn_fp, input_solvents, input_reagents)
         scores = F.softmax(scores, dim=1).view(-1)

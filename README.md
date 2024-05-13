@@ -64,7 +64,24 @@ python -u train_LCC_relevance_listwise_unfixed_augmentation.py --batch_size 32 -
     --dropout 0.2 --num_fold 7 --init_lr 0.0001 --max_lr 0.007 --final_lr 0.00005 --warmup_epochs 2 \
     --cutoff_solv 0.1 --cutoff_reag 0.1 --redo_epoch 2 --num_last_layer 2 \
     --h1_size_rxn_fp 800 --h_size_solvent 100 --h_size_reagent 200 --h2_size 500 \
-    --train_path ..data/reaxys_output_local \
-    --save_dir ..save_models/test_10R_second_7 \
+    --train_path ../data/reaxys_output_local \
+    --save_dir ../save_models/test_10R_second_7 \
     --checkpoint_path ../save_models/test_10R_first_local_10/multitask_model_epoch-80.checkpoint
+```
+
+## Evaluate the results
+
+```
+cd rxn_yield_context/evaluate_model
+
+C_SOLV=0.3
+C_REAG=0.25
+FIRST=10
+SECOND=7
+
+python -u evaluate_overall.py \
+    --test_dir ../data/reaxys_output \
+    --multitask_model ../save_models/test_10R_first_local_${FIRST}/multitask_model_epoch-80.checkpoint \
+    --listwise_model ../save_models/test_10R_second_${SECOND}/rxn_model_relevance_listwise_morgan_epoch-80.checkpoint \
+    --cutoff_solvent ${C_SOLV} --cutoff_reagent ${C_REAG} --verbose True
 ```
