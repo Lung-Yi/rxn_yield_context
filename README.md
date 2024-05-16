@@ -1,4 +1,6 @@
 # RxnYieldContext
+This is the respository of "Enhancing chemical synthesis: a two-stage deep neural network for predicting feasible reaction conditions."
+https://link.springer.com/article/10.1186/s13321-024-00805-4
 
 ![alt text](saved_figures/abstract.svg)
 
@@ -84,4 +86,19 @@ python -u evaluate_overall.py \
     --multitask_model ../save_models/test_10R_first_local_${FIRST}/multitask_model_epoch-80.checkpoint \
     --listwise_model ../save_models/test_10R_second_${SECOND}/rxn_model_relevance_listwise_morgan_epoch-80.checkpoint \
     --cutoff_solvent ${C_SOLV} --cutoff_reagent ${C_REAG} --verbose True
+```
+
+## Cite this work
+If you find this research or project useful, please cite this paper:
+```
+@article{chen2024enhancing,
+  title={Enhancing chemical synthesis: a two-stage deep neural network for predicting feasible reaction conditions},
+  author={Chen, Lung-Yi and Li, Yi-Pei},
+  journal={Journal of Cheminformatics},
+  volume={16},
+  number={1},
+  pages={11},
+  year={2024},
+  publisher={Springer}
+}
 ```
